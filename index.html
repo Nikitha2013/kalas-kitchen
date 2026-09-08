@@ -1,9 +1,11 @@
-In TextEdit, press ⌘ + A, delete everything, and paste this whole replacement code:
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="logo.png">
+
     <title>Kala's Kitchen | Homemade South Indian Food</title>
 
     <style>
@@ -17,35 +19,53 @@ In TextEdit, press ⌘ + A, delete everything, and paste this whole replacement 
         header {
             background: #d98c9a;
             color: white;
-            text-align: center;
-            padding: 40px 20px;
+            padding: 20px 40px;
         }
 
-        header h1 {
-            font-size: 44px;
-            margin: 0 0 10px;
+        .header-content {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
         }
 
-        header p {
-            font-size: 18px;
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .brand h1 {
+            font-size: 32px;
+            margin: 0 0 5px;
+        }
+
+        .brand p {
             margin: 0;
+            font-size: 15px;
         }
 
         nav {
-            background: #f5d6dc;
-            text-align: center;
-            padding: 15px;
+            text-align: right;
         }
 
         nav a {
-            color: #633d45;
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            margin: 0 18px;
+            margin-left: 22px;
         }
 
         nav a:hover {
-            color: #b85c70;
+            color: #fff0f3;
         }
 
         .hero {
@@ -123,16 +143,26 @@ In TextEdit, press ⌘ + A, delete everything, and paste this whole replacement 
 <body>
 
 <header>
-    <h1>Kala's Kitchen</h1>
-    <p>Homemade food, made with love ❤️</p>
-</header>
+    <div class="header-content">
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#food">Our Food</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
+        <div class="brand">
+            <img src="logo.png" alt="Kala's Kitchen logo">
+
+            <div>
+                <h1>Kala's Kitchen</h1>
+                <p>Homemade food, made with love ❤️</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#food">Our Food</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </div>
+</header>
 
 <section class="hero" id="home">
     <h2>Welcome to Kala's Kitchen 🌸</h2>
