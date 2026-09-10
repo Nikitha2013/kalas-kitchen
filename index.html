@@ -37,15 +37,15 @@
             gap: 15px;
         }
 
-     .brand img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    background: white;
-    padding: 5px;
-    border-radius: 50%;
-    box-shadow: 0 3px 10px rgba(80, 40, 50, 0.2);
-}
+        .brand img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            background: white;
+            padding: 5px;
+            border-radius: 50%;
+            box-shadow: 0 3px 10px rgba(80, 40, 50, 0.2);
+        }
 
         .brand h1 {
             font-size: 32px;
@@ -141,6 +141,112 @@
             text-align: center;
             padding: 20px;
         }
+
+
+        /* MENU STYLING */
+
+        .menu-section {
+            padding: 70px 20px;
+            background: #fff9f5;
+        }
+
+        .menu-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .menu-intro h2 {
+            font-size: 36px;
+            color: #b85c70;
+            margin-bottom: 10px;
+        }
+
+        .menu-intro p {
+            font-size: 17px;
+            color: #6b4a4a;
+        }
+
+        .menu-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: white;
+            padding: 28px 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 18px rgba(100, 50, 60, 0.10);
+            border: 1px solid #f3dce1;
+        }
+
+        .menu-card h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #9e4d60;
+            font-size: 23px;
+            border-bottom: 2px solid #f5d6dc;
+            padding-bottom: 12px;
+        }
+
+        .menu-item {
+            margin-bottom: 18px;
+        }
+
+        .menu-item-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            font-weight: bold;
+        }
+
+        .menu-price {
+            color: #b85c70;
+            white-space: nowrap;
+        }
+
+        .menu-description {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #806666;
+        }
+
+        .preorder-box {
+            max-width: 700px;
+            margin: 45px auto 0;
+            padding: 25px;
+            background: #f5d6dc;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .preorder-box h3 {
+            margin-top: 0;
+            color: #9e4d60;
+        }
+
+        @media (max-width: 750px) {
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+        }
+
     </style>
 </head>
 
@@ -168,202 +274,343 @@
     </div>
 </header>
 
+
 <section class="hero" id="home">
+
     <h2>Welcome to Kala's Kitchen 🌸</h2>
+
     <p>
         Homemade South Indian food prepared with care,
         traditional flavours and family recipes.
     </p>
+
 </section>
 
+
 <section class="section" id="food">
+
     <h2>What We Offer</h2>
 
     <div class="cards">
 
         <div class="card">
             <h3>🍛 Homemade Meals</h3>
-            <p>Comforting homemade dishes prepared with care.</p>
+            <p>
+                Comforting homemade dishes prepared with care.
+            </p>
         </div>
 
         <div class="card">
             <h3>🌶️ South Indian Flavours</h3>
-            <p>Traditional flavours inspired by South Indian cooking.</p>
+            <p>
+                Traditional flavours inspired by South Indian cooking.
+            </p>
         </div>
 
         <div class="card">
             <h3>🎉 Catering</h3>
-            <p>Food for small family gatherings and special occasions.</p>
+            <p>
+                Food for small family gatherings and special occasions.
+            </p>
         </div>
 
     </div>
+
 </section>
+
 
 <section class="menu-section" id="menu">
 
     <div class="menu-intro">
+
         <h2>Our Menu 🍛</h2>
-        <p>Homemade South Indian flavours, made with care.</p>
+
+        <p>
+            Homemade South Indian flavours, made with care.
+        </p>
+
     </div>
+
 
     <div class="menu-grid">
 
+
+        <!-- STARTERS & SIDES -->
+
         <div class="menu-card">
+
             <h3>🌶️ Starters & Sides</h3>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Methu Vadai</span>
                     <span class="menu-price">£3.00</span>
                 </div>
-                <p class="menu-description">4 pieces with chutney</p>
+
+                <p class="menu-description">
+                    4 pieces with chutney
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Paruppu Vadai</span>
                     <span class="menu-price">£3.00</span>
                 </div>
-                <p class="menu-description">4 pieces with chutney</p>
+
+                <p class="menu-description">
+                    4 pieces with chutney
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Gobi Manchurian</span>
                     <span class="menu-price">£3.00</span>
                 </div>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Chicken Chukka</span>
                     <span class="menu-price">£3.00</span>
                 </div>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Egg Paniyaram</span>
                     <span class="menu-price">£5.00</span>
                 </div>
-                <p class="menu-description">12 pieces</p>
+
+                <p class="menu-description">
+                    12 pieces
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Lamb Chukka</span>
                     <span class="menu-price">£6.00</span>
                 </div>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>King Fish Fry</span>
                     <span class="menu-price">£7.00</span>
                 </div>
-                <p class="menu-description">1 large or 2 medium pieces</p>
+
+                <p class="menu-description">
+                    1 large or 2 medium pieces
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Fritatta</span>
                     <span class="menu-price">£5.00</span>
                 </div>
-                <p class="menu-description">8 slices · Vegetables, egg & cheese</p>
+
+                <p class="menu-description">
+                    8 slices · Vegetables, egg & cheese
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Aviyal</span>
                     <span class="menu-price">£5.00</span>
                 </div>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Onion Bajji</span>
                     <span class="menu-price">£3.50</span>
                 </div>
-                <p class="menu-description">250g</p>
+
+                <p class="menu-description">
+                    250g
+                </p>
+
             </div>
+
         </div>
 
+
+        <!-- BIRIYANI -->
+
         <div class="menu-card">
+
             <h3>🍚 Biriyani</h3>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Vegetable Biriyani</span>
                     <span class="menu-price">£5.00</span>
                 </div>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Chicken Biriyani</span>
                     <span class="menu-price">£6.00</span>
                 </div>
-                <p class="menu-description">Basmati rice</p>
+
+                <p class="menu-description">
+                    Basmati rice
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Chicken Biriyani</span>
                     <span class="menu-price">£7.00</span>
                 </div>
-                <p class="menu-description">Seeraga Samba rice</p>
+
+                <p class="menu-description">
+                    Seeraga Samba rice
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Lamb Biriyani</span>
                     <span class="menu-price">£8.00</span>
                 </div>
-                <p class="menu-description">Basmati rice</p>
+
+                <p class="menu-description">
+                    Basmati rice
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Lamb Biriyani</span>
                     <span class="menu-price">£9.00</span>
                 </div>
-                <p class="menu-description">Seeraga Samba rice</p>
+
+                <p class="menu-description">
+                    Seeraga Samba rice
+                </p>
+
             </div>
 
+
             <div class="menu-item">
+
                 <div class="menu-item-top">
                     <span>Fish Biriyani</span>
                     <span class="menu-price">£10.00</span>
                 </div>
-                <p class="menu-description">King fish cubes · Basmati rice</p>
+
+                <p class="menu-description">
+                    King fish cubes · Basmati rice
+                </p>
+
             </div>
+
         </div>
 
     </div>
 
+
+    <!-- PRE-ORDER BOX -->
+
     <div class="preorder-box">
+
         <h3>🌸 Pre-Orders Only</h3>
-        <p>Contact us to place your order.</p>
-        <p><strong>07440 410566</strong></p>
+
+        <p>
+            Contact us to place your order.
+        </p>
+
+        <p>
+            <strong>07440 410566</strong>
+        </p>
+
     </div>
 
 </section>
+
+
+<section class="section" id="about">
+
     <h2>About Kala's Kitchen</h2>
 
     <p>
         Kala's Kitchen is a small, home-run food business bringing
         homemade food to family, friends and local customers.
     </p>
+
 </section>
+
 
 <section class="contact" id="contact">
+
     <h2>Get in Touch</h2>
-    <p>Interested in our food or catering?</p>
-    <p>Contact us to find out more.</p>
+
+    <p>
+        Interested in our food or catering?
+    </p>
+
+    <p>
+        Contact us to find out more.
+    </p>
+
 </section>
 
+
 <footer>
+
     <p>© 2026 Kala's Kitchen</p>
+
 </footer>
 
+
 </body>
+</html>
