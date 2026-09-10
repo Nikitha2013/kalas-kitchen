@@ -4,21 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="logo.png?v=2">
-
     <title>Kala's Kitchen | Homemade South Indian Food</title>
 
+    <link rel="icon" type="image/png" href="logo.png?v=2">
+
     <style>
-
-        /* =========================
-           GENERAL
-        ========================= */
-
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -26,19 +16,14 @@
             color: #4a3030;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
-
         header {
             background: #d98c9a;
             color: white;
             padding: 20px 40px;
-            position: relative;
         }
 
         .header-content {
-            max-width: 1150px;
+            max-width: 1100px;
             margin: auto;
             display: flex;
             align-items: center;
@@ -59,7 +44,7 @@
             background: white;
             padding: 5px;
             border-radius: 50%;
-            box-shadow: 0 3px 12px rgba(80, 40, 50, 0.2);
+            box-shadow: 0 3px 10px rgba(80, 40, 50, 0.2);
         }
 
         .brand h1 {
@@ -81,70 +66,46 @@
             text-decoration: none;
             font-weight: bold;
             margin-left: 22px;
-            transition: 0.2s;
         }
 
         nav a:hover {
             color: #fff0f3;
         }
 
-        /* =========================
-           HERO
-        ========================= */
-
         .hero {
             text-align: center;
-            padding: 85px 20px 75px;
+            padding: 75px 20px;
             background: #fff9f5;
         }
 
-        .hero-decoration {
-            color: #c38a35;
-            font-size: 25px;
-            letter-spacing: 8px;
-            margin-bottom: 15px;
-        }
-
         .hero h2 {
-            font-size: 40px;
-            color: #a94f63;
-            margin: 0 0 15px;
+            font-size: 36px;
+            color: #b85c70;
+            margin-bottom: 15px;
         }
 
         .hero p {
             font-size: 19px;
-            max-width: 700px;
+            max-width: 650px;
             margin: auto;
             line-height: 1.7;
-            color: #624646;
         }
 
         .hero-tagline {
-            margin-top: 22px !important;
-            font-weight: bold;
-            color: #9e4d60 !important;
-            letter-spacing: 2px;
-            font-size: 15px !important;
+            margin-top: 18px !important;
+            font-size: 16px !important;
+            color: #806666;
+            font-style: italic;
         }
 
-        /* =========================
-           WHAT WE OFFER
-        ========================= */
-
         .section {
-            padding: 65px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         .section h2 {
-            font-size: 32px;
+            font-size: 31px;
             color: #b85c70;
-            margin-bottom: 10px;
-        }
-
-        .section-intro {
-            color: #765858;
-            margin-bottom: 35px;
         }
 
         .cards {
@@ -157,279 +118,147 @@
 
         .card {
             background: #ffffff;
-            width: 270px;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(100, 50, 60, 0.10);
-            border: 1px solid #f3dce1;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(100, 50, 60, 0.14);
+            width: 250px;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(100, 50, 60, 0.12);
         }
 
         .card h3 {
             color: #b85c70;
-            margin-top: 0;
         }
 
         .card p {
-            line-height: 1.6;
-            color: #6b5050;
+            line-height: 1.5;
         }
 
-        /* =========================
-           MENU
-        ========================= */
+        /* MENU */
 
         .menu-section {
-            padding: 80px 20px;
-            background: #fff6f1;
+            padding: 70px 20px;
+            background: #fff9f5;
         }
 
         .menu-intro {
             text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .menu-flourish {
-            color: #c38a35;
-            font-size: 22px;
-            letter-spacing: 6px;
-            margin-bottom: 12px;
+            margin-bottom: 45px;
         }
 
         .menu-intro h2 {
-            font-size: 42px;
-            color: #9e4d60;
-            margin: 0 0 12px;
-        }
-
-        .menu-intro h2::after {
-            content: " ◆ ";
-            color: #c38a35;
-            font-size: 16px;
-            display: block;
-            margin-top: 15px;
+            font-size: 36px;
+            color: #b85c70;
+            margin-bottom: 10px;
         }
 
         .menu-intro p {
             font-size: 17px;
-            color: #725858;
-            margin-top: 15px;
+            color: #6b4a4a;
         }
 
-        /* =========================
-           MENU GRID
-        ========================= */
-
         .menu-grid {
-            max-width: 1150px;
+            max-width: 1100px;
             margin: auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            align-items: start;
+            gap: 25px;
         }
 
         .menu-card {
-            background: #ffffff;
-            padding: 32px;
-            border-radius: 22px;
-            box-shadow: 0 7px 22px rgba(100, 50, 60, 0.10);
-            border: 1px solid #efd7dd;
-            text-align: left;
+            background: white;
+            padding: 28px 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 18px rgba(100, 50, 60, 0.10);
+            border: 1px solid #f3dce1;
         }
 
         .menu-card h3 {
-            margin: 0 0 8px;
-            color: #ffffff;
-            background: #9e4d60;
-            display: inline-block;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-family: Georgia, serif;
-            font-size: 22px;
-            letter-spacing: 0.5px;
+            margin-top: 0;
+            margin-bottom: 7px;
+            color: #9e4d60;
+            font-size: 23px;
         }
 
         .menu-tagline {
-            margin: 10px 0 25px;
-            color: #9b7474;
-            font-style: italic;
+            margin: 0 0 22px;
+            color: #9a7777;
             font-size: 14px;
+            font-style: italic;
         }
-
-        /* =========================
-           MENU ITEMS
-        ========================= */
 
         .menu-item {
-            margin-bottom: 19px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #f3e5e8;
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
+            margin-bottom: 18px;
         }
 
         .menu-item-top {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
             gap: 15px;
             font-weight: bold;
-            font-size: 16px;
-        }
-
-        .menu-item-name {
-            color: #4d3030;
         }
 
         .menu-price {
-            color: #a94f63;
+            color: #b85c70;
             white-space: nowrap;
-            font-weight: bold;
         }
 
         .menu-description {
             margin: 5px 0 0;
-            font-size: 13px;
-            color: #806b6b;
+            font-size: 14px;
+            color: #806666;
             line-height: 1.5;
         }
 
-        /* =========================
-           FEATURED MENU CARD
-        ========================= */
-
-        .menu-card.featured {
-            border: 2px solid #e6c3ca;
-            background: linear-gradient(to bottom, #fffdfb, #fff8f5);
+        .menu-divider {
+            width: 55px;
+            height: 2px;
+            background: #f1cbd3;
+            margin: 12px auto 25px;
+            border: none;
         }
-
-        .menu-card.featured h3 {
-            background: #b85c70;
-        }
-
-        /* =========================
-           PRE-ORDER BOX
-        ========================= */
 
         .preorder-box {
-            max-width: 800px;
-            margin: 55px auto 0;
-            padding: 32px;
+            max-width: 700px;
+            margin: 45px auto 0;
+            padding: 30px 25px;
             background: #f5d6dc;
-            border-radius: 25px;
+            border-radius: 20px;
             text-align: center;
-            border: 1px solid #e7bfc8;
-            box-shadow: 0 6px 18px rgba(100, 50, 60, 0.08);
-        }
-
-        .preorder-box .preorder-decoration {
-            color: #a66a26;
-            font-size: 20px;
-            letter-spacing: 5px;
         }
 
         .preorder-box h3 {
-            margin: 12px 0 8px;
+            margin-top: 0;
             color: #9e4d60;
-            font-family: Georgia, serif;
-            font-size: 25px;
+            font-size: 24px;
         }
 
         .preorder-box p {
-            color: #684848;
+            line-height: 1.6;
         }
 
-        .phone-number {
-            font-size: 20px;
+        .phone {
+            font-size: 21px;
             font-weight: bold;
             color: #9e4d60;
-            margin-top: 15px;
         }
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about-section {
-            background: #fff9f5;
-        }
-
-        .about-box {
-            max-width: 850px;
-            margin: 30px auto 0;
-            background: white;
-            padding: 35px;
-            border-radius: 22px;
-            box-shadow: 0 6px 20px rgba(100, 50, 60, 0.08);
-            border: 1px solid #f1dfe3;
-        }
-
-        .about-box p {
-            line-height: 1.8;
-            color: #634b4b;
-            font-size: 17px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
 
         .contact {
             background: #f5d6dc;
-            padding: 65px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         .contact h2 {
             color: #9e4d60;
-            font-size: 32px;
-            margin-bottom: 15px;
         }
-
-        .contact p {
-            color: #684848;
-            font-size: 17px;
-        }
-
-        .contact-phone {
-            display: inline-block;
-            margin-top: 15px;
-            background: #9e4d60;
-            color: white;
-            padding: 13px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
 
         footer {
             background: #d98c9a;
             color: white;
             text-align: center;
-            padding: 22px;
+            padding: 20px;
         }
 
-        footer p {
-            margin: 0;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 850px) {
+        @media (max-width: 750px) {
 
             .menu-grid {
                 grid-template-columns: 1fr;
@@ -448,98 +277,29 @@
                 margin: 0 8px;
             }
 
-            .hero h2 {
-                font-size: 32px;
-            }
-
-            .menu-intro h2 {
-                font-size: 35px;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            header {
-                padding: 18px 15px;
-            }
-
-            .brand {
-                flex-direction: column;
-            }
-
-            .brand h1 {
-                font-size: 27px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 6px 5px;
-                font-size: 14px;
-            }
-
-            .hero {
-                padding: 60px 18px;
-            }
-
-            .hero h2 {
-                font-size: 29px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 50px 15px;
-            }
-
-            .menu-section {
-                padding: 55px 12px;
-            }
-
             .menu-card {
-                padding: 24px 20px;
+                padding: 25px 20px;
             }
 
-            .menu-card h3 {
-                font-size: 19px;
-            }
-
-            .menu-item-top {
-                font-size: 15px;
-            }
-
-            .menu-intro h2 {
-                font-size: 31px;
-            }
-
-            .preorder-box {
-                padding: 25px 18px;
+            .hero h2 {
+                font-size: 30px;
             }
         }
-
     </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
-
     <div class="header-content">
 
         <div class="brand">
-
             <img src="logo.png" alt="Kala's Kitchen logo">
 
             <div>
                 <h1>Kala's Kitchen</h1>
                 <p>Homemade food, made with love ❤️</p>
             </div>
-
         </div>
 
         <nav>
@@ -550,21 +310,12 @@
         </nav>
 
     </div>
-
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero" id="home">
 
-    <div class="hero-decoration">
-        ✦ ─── ✦
-    </div>
-
-    <h2>Welcome to Kala's Kitchen 🌸</h2>
+    <h2>Homemade South Indian Food</h2>
 
     <p>
         Homemade South Indian food prepared with care,
@@ -572,71 +323,22 @@
     </p>
 
     <p class="hero-tagline">
-        HOME COOKED · HEART SERVED
+        ✦ Traditional flavours, homemade with care. ✦
     </p>
 
 </section>
 
 
-<!-- =========================
-     WHAT WE OFFER
-========================= -->
-
-<section class="section" id="food">
-
-    <h2>What We Offer</h2>
-
-    <p class="section-intro">
-        Homemade food for everyday moments and special occasions.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>🍛 Homemade Meals</h3>
-            <p>
-                Comforting homemade dishes prepared with care
-                and traditional flavours.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🌶️ South Indian Flavours</h3>
-            <p>
-                Traditional flavours inspired by South Indian
-                home cooking and family recipes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>🎉 Catering</h3>
-            <p>
-                Food for small family gatherings,
-                celebrations and special occasions.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MENU
-========================= -->
+<!-- MENU -->
 
 <section class="menu-section" id="menu">
 
     <div class="menu-intro">
 
-        <div class="menu-flourish">
-            ✦ ─── ✦
-        </div>
-
-        <h2>Our Menu 🍛</h2>
+        <h2>Our Menu 🌸</h2>
 
         <p>
-            Traditional flavours. Homemade with care.
+            Delicious homemade favourites, prepared fresh with care.
         </p>
 
     </div>
@@ -645,311 +347,251 @@
     <div class="menu-grid">
 
 
-        <!-- =========================
-             STARTERS & SIDES
-        ========================== -->
+        <!-- STARTERS -->
 
-        <div class="menu-card featured">
+        <div class="menu-card">
 
-            <h3>🌶️ Starters & Sides</h3>
+            <h3>Starters & Sides ✦</h3>
 
             <p class="menu-tagline">
                 Little bites, big flavours.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Methu Vadai</span>
-                    <span class="menu-price">£3.00</span>
+                    <span>Methu Vadai</span>
                 </div>
-                <p class="menu-description">
-                    4 pieces with chutney
-                </p>
+                <p class="menu-description">4 pieces with chutney</p>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Paruppu Vadai</span>
-                    <span class="menu-price">£3.00</span>
+                    <span>Paruppu Vadai</span>
                 </div>
-                <p class="menu-description">
-                    4 pieces with chutney
-                </p>
+                <p class="menu-description">4 pieces with chutney</p>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Gobi Manchurian</span>
+                    <span>Gobi Manchurian</span>
                     <span class="menu-price">£3.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chicken Chukka</span>
+                    <span>Chicken Chukka</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Egg Paniyaram</span>
+                    <span>Egg Paniyaram</span>
                     <span class="menu-price">£5.00</span>
                 </div>
-                <p class="menu-description">
-                    12 pieces
-                </p>
+                <p class="menu-description">12 pieces</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lamb Chukka</span>
+                    <span>Lamb Chukka</span>
                     <span class="menu-price">£6.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">King Fish Fry</span>
+                    <span>King Fish Fry</span>
                     <span class="menu-price">£7.00</span>
                 </div>
-                <p class="menu-description">
-                    1 large or 2 medium pieces
-                </p>
+                <p class="menu-description">1 large or 2 medium pieces</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Fritatta</span>
+                    <span>Fritatta</span>
                     <span class="menu-price">£5.00</span>
                 </div>
-                <p class="menu-description">
-                    8 slices · Vegetables, egg & cheese
-                </p>
+                <p class="menu-description">8 slices — vegetables, egg & cheese</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Aviyal</span>
+                    <span>Aviyal</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Onion Bajji</span>
+                    <span>Onion Bajji</span>
                     <span class="menu-price">£3.50</span>
                 </div>
-                <p class="menu-description">
-                    250g
-                </p>
+                <p class="menu-description">250g</p>
             </div>
 
         </div>
 
 
-        <!-- =========================
-             BIRIYANI
-        ========================== -->
+        <!-- BIRIYANI -->
 
-        <div class="menu-card featured">
+        <div class="menu-card">
 
-            <h3>🍚 Biriyani</h3>
+            <h3>Biriyani ✦</h3>
 
             <p class="menu-tagline">
                 Fragrant rice, rich spices, made with care.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Vegetable Biriyani</span>
+                    <span>Vegetable Biriyani</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chicken Biriyani</span>
+                    <span>Chicken Biriyani</span>
                     <span class="menu-price">£6.00</span>
                 </div>
-                <p class="menu-description">
-                    Basmati rice
-                </p>
+                <p class="menu-description">Basmati Rice</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chicken Biriyani</span>
+                    <span>Chicken Biriyani</span>
                     <span class="menu-price">£7.00</span>
                 </div>
-                <p class="menu-description">
-                    Seeraga Samba rice
-                </p>
+                <p class="menu-description">Seeraga Samba Rice</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lamb Biriyani</span>
+                    <span>Lamb Biriyani</span>
                     <span class="menu-price">£8.00</span>
                 </div>
-                <p class="menu-description">
-                    Basmati rice
-                </p>
+                <p class="menu-description">Basmati Rice</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lamb Biriyani</span>
+                    <span>Lamb Biriyani</span>
                     <span class="menu-price">£9.00</span>
                 </div>
-                <p class="menu-description">
-                    Seeraga Samba rice
-                </p>
+                <p class="menu-description">Seeraga Samba Rice</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Fish Biriyani</span>
+                    <span>Fish Biriyani</span>
                     <span class="menu-price">£10.00</span>
                 </div>
-                <p class="menu-description">
-                    King fish cubes · Basmati rice
-                </p>
+                <p class="menu-description">King Fish Cubes, Basmati Rice</p>
             </div>
 
         </div>
 
 
-        <!-- =========================
-             RICE & BREADS
-        ========================== -->
+        <!-- RICE & BREADS -->
 
         <div class="menu-card">
 
-            <h3>🍚 Rice & Breads</h3>
+            <h3>Rice & Breads 🌸</h3>
 
             <p class="menu-tagline">
-                Simple favourites, made the homemade way.
+                Homemade favourites, made to be shared.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lemon Rice</span>
+                    <span>Lemon Rice</span>
                     <span class="menu-price">£2.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Tamarind Rice</span>
+                    <span>Tamarind Rice</span>
                     <span class="menu-price">£3.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Bisibele Bath</span>
+                    <span>Bisibele Bath</span>
                     <span class="menu-price">£4.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Coconut Rice</span>
+                    <span>Coconut Rice</span>
                     <span class="menu-price">£4.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">
-                        Coconut Milk Rice & Veg Kurma
-                    </span>
+                    <span>Coconut Milk Rice & Veg Kurma</span>
                     <span class="menu-price">£7.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">
-                        Coconut Milk Rice & Lamb Curry
-                    </span>
+                    <span>Coconut Milk Rice & Lamb Curry</span>
                     <span class="menu-price">£8.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chappathi</span>
+                    <span>Chappathi</span>
                     <span class="menu-price">£3.00</span>
                 </div>
-                <p class="menu-description">
-                    5 nos
-                </p>
+                <p class="menu-description">5 Nos</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Idiyappam</span>
+                    <span>Idiyappam</span>
                     <span class="menu-price">£3.00</span>
                 </div>
-                <p class="menu-description">
-                    4 nos
-                </p>
+                <p class="menu-description">4 Nos</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Veg Kothu Parotta</span>
+                    <span>Veg Kothu Parotta</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Egg Kothu Parotta</span>
+                    <span>Egg Kothu Parotta</span>
                     <span class="menu-price">£6.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chicken Kothu Parotta</span>
+                    <span>Chicken Kothu Parotta</span>
                     <span class="menu-price">£7.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lamb Kothu Parotta</span>
+                    <span>Lamb Kothu Parotta</span>
                     <span class="menu-price">£8.00</span>
                 </div>
             </div>
@@ -957,385 +599,321 @@
         </div>
 
 
-        <!-- =========================
-             VEG CURRIES
-        ========================== -->
+        <!-- VEG CURRIES -->
 
         <div class="menu-card">
 
-            <h3>🥘 Veg Curries</h3>
+            <h3>Veg Curries ✦</h3>
 
             <p class="menu-tagline">
-                Comforting, flavourful and full of tradition.
+                Comforting flavours from the heart of the kitchen.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Vegetable Kurma</span>
+                    <span>Vegetable Kurma</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chana Masala</span>
+                    <span>Chana Masala</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Pav Bhaji Masala</span>
-                    <span class="menu-price">£5.00</span>
-                </div>
-            </div>
-
-
-            <div class="menu-item">
-                <div class="menu-item-top">
-                    <span class="menu-item-name">Muttai Kulambu</span>
-                    <span class="menu-price">£5.00</span>
-                </div>
-                <p class="menu-description">
-                    Broken eggs
-                </p>
-            </div>
-
-
-            <div class="menu-item">
-                <div class="menu-item-top">
-                    <span class="menu-item-name">Paruppu Urundai Kulambu</span>
+                    <span>Pav Bhaji Masala</span>
                     <span class="menu-price">£6.00</span>
                 </div>
             </div>
 
+            <div class="menu-item">
+                <div class="menu-item-top">
+                    <span>Muttai Kulambu</span>
+                </div>
+                <p class="menu-description">Broken eggs</p>
+            </div>
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Paneer Butter Masala</span>
-                    <span class="menu-price">£6.50</span>
+                    <span>Paruppu Urundai Kulambu</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Matar Paneer</span>
-                    <span class="menu-price">£6.50</span>
-                </div>
-            </div>
-
-
-            <div class="menu-item">
-                <div class="menu-item-top">
-                    <span class="menu-item-name">Aloo Matar Curry</span>
+                    <span>Aloo Matar Curry</span>
                     <span class="menu-price">£5.00</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-top">
+                    <span>Paneer Butter Masala</span>
+                    <span class="menu-price">£6.50</span>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-top">
+                    <span>Matar Paneer</span>
+                    <span class="menu-price">£6.50</span>
                 </div>
             </div>
 
         </div>
 
 
-        <!-- =========================
-             NON-VEG CURRIES
-        ========================== -->
+        <!-- NON VEG CURRIES -->
 
-        <div class="menu-card featured">
+        <div class="menu-card">
 
-            <h3>🍗 Non-Veg Curries</h3>
+            <h3>Non-Veg Curries ✦</h3>
 
             <p class="menu-tagline">
-                Rich, aromatic dishes made for a proper feast.
+                Rich, aromatic and full of tradition.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chicken Curry</span>
+                    <span>Chicken Curry</span>
                     <span class="menu-price">£6.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Butter Chicken</span>
+                    <span>Butter Chicken</span>
                     <span class="menu-price">£6.50</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chettinad Chicken</span>
+                    <span>Chettinad Chicken</span>
                     <span class="menu-price">£6.50</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Prawn Curry</span>
-                    <span class="menu-price">£7.00</span>
-                </div>
-            </div>
-
-
-            <div class="menu-item">
-                <div class="menu-item-top">
-                    <span class="menu-item-name">Paya</span>
+                    <span>Paya</span>
                     <span class="menu-price">£7.50</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lamb Curry</span>
+                    <span>Lamb Curry</span>
                     <span class="menu-price">£8.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Chettinad Lamb</span>
+                    <span>Chettinad Lamb</span>
                     <span class="menu-price">£8.50</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Fish Curry</span>
+                    <span>Fish Curry</span>
                     <span class="menu-price">£9.00</span>
                 </div>
-                <p class="menu-description">
-                    King Fish / Salmon
-                </p>
+                <p class="menu-description">King Fish / Salmon</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Salna (Plain)</span>
-                    <span class="menu-price">£4.00</span>
+                    <span>Prawn Curry</span>
                 </div>
             </div>
 
         </div>
 
 
-        <!-- =========================
-             SWEETS & SNACKS
-        ========================== -->
+        <!-- SWEETS -->
 
         <div class="menu-card">
 
-            <h3>🍰 Sweets & Snacks</h3>
+            <h3>Sweets & Snacks 🌸</h3>
 
             <p class="menu-tagline">
-                Something sweet for every occasion.
+                A little sweetness for every occasion.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Kesari</span>
+                    <span>Kesari</span>
                     <span class="menu-price">£3.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Vermicelli Payasam</span>
+                    <span>Vermicelli Payasam</span>
                     <span class="menu-price">£3.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Paruppu Payasam</span>
+                    <span>Paruppu Payasam</span>
                     <span class="menu-price">£3.50</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Pineapple Kesari</span>
+                    <span>Pineapple Kesari</span>
                     <span class="menu-price">£3.50</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Kuli Paniyaram</span>
+                    <span>Kuli Paniyaram</span>
                     <span class="menu-price">£4.00</span>
                 </div>
-                <p class="menu-description">
-                    Sweet · 12 pieces
-                </p>
+                <p class="menu-description">Sweet — 12 pieces</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Muttai Mittai</span>
+                    <span>Muttai Mittai</span>
                     <span class="menu-price">£4.50</span>
                 </div>
-                <p class="menu-description">
-                    250g
-                </p>
+                <p class="menu-description">250g</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Sweet Poli</span>
+                    <span>Sweet Poli</span>
                     <span class="menu-price">£4.00</span>
                 </div>
-                <p class="menu-description">
-                    Wheat flour & chickpeas · 5 nos
-                </p>
+                <p class="menu-description">Wheat flour & chickpeas — 5 nos</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Ghee Mysurpa</span>
+                    <span>Ghee Mysurpa</span>
                     <span class="menu-price">£4.00</span>
                 </div>
-                <p class="menu-description">
-                    250g
-                </p>
+                <p class="menu-description">250g</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Tea Cake</span>
+                    <span>Tea Cake</span>
                     <span class="menu-price">£5.00</span>
                 </div>
-                <p class="menu-description">
-                    Approx 400g
-                </p>
+                <p class="menu-description">Approx. 400g</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Rose Cookies</span>
+                    <span>Rose Cookies</span>
                     <span class="menu-price">£4.00</span>
                 </div>
-                <p class="menu-description">
-                    Achu Murukku · 15 pieces
-                </p>
+                <p class="menu-description">Achu Murukku — 15 pieces</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Ulundhu Kali</span>
+                    <span>Ulundhu Kali</span>
                     <span class="menu-price">£5.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Mixture</span>
+                    <span>Mixture</span>
                     <span class="menu-price">£6.00</span>
                 </div>
-                <p class="menu-description">
-                    500g
-                </p>
+                <p class="menu-description">500g</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Seeyam / Suzhiyam</span>
+                    <span>Seeyam / Suzhiyam</span>
                     <span class="menu-price">£6.00</span>
                 </div>
-                <p class="menu-description">
-                    8 pieces
-                </p>
+                <p class="menu-description">8 pieces</p>
             </div>
-
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Lemon Drizzle Cake</span>
+                    <span>Salna</span>
                     <span class="menu-price">£4.00</span>
                 </div>
-                <p class="menu-description">
-                    Approx 250g
-                </p>
+                <p class="menu-description">Plain</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-top">
+                    <span>Lemon Drizzle Cake</span>
+                    <span class="menu-price">£4.00</span>
+                </div>
+                <p class="menu-description">Approx. 250g</p>
             </div>
 
         </div>
 
 
-        <!-- =========================
-             DRINKS
-        ========================== -->
+        <!-- DRINKS -->
 
-        <div class="menu-card featured">
+        <div class="menu-card">
 
-            <h3>🥭 Drinks</h3>
+            <h3>Drinks 🥭</h3>
 
             <p class="menu-tagline">
                 Cool, creamy and refreshing.
             </p>
 
+            <hr class="menu-divider">
 
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Mango Lassi</span>
+                    <span>Mango Lassi</span>
                     <span class="menu-price">£2.00</span>
                 </div>
             </div>
 
-
             <div class="menu-item">
                 <div class="menu-item-top">
-                    <span class="menu-item-name">Jigarthanda</span>
+                    <span>Jigarthanda</span>
                     <span class="menu-price">£4.00</span>
                 </div>
             </div>
 
         </div>
 
-
     </div>
 
 
-    <!-- =========================
-         PRE-ORDER
-    ========================== -->
+    <!-- PRE-ORDERS -->
 
     <div class="preorder-box">
 
-        <div class="preorder-decoration">
-            ✦ ─── ♥ ─── ✦
-        </div>
-
-        <h3>🌸 Pre-Orders Only</h3>
+        <h3>✦ Pre-Orders Only ✦</h3>
 
         <p>
-            Freshly prepared to order.
-            Contact us to place your order.
+            Everything is homemade fresh with care,
+            so please place your order in advance.
         </p>
 
-        <p class="phone-number">
-            07440 410566
+        <p class="phone">
+            📞 07440 410566
         </p>
 
     </div>
@@ -1343,71 +921,73 @@
 </section>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
-<section class="section about-section" id="about">
+<section class="section" id="about">
 
     <h2>About Kala's Kitchen</h2>
 
-    <p class="section-intro">
-        Homemade food, made with love.
+    <p>
+        Kala's Kitchen is all about homemade South Indian food,
+        prepared with care using traditional flavours and family recipes.
     </p>
 
-    <div class="about-box">
+    <div class="cards">
 
-        <p>
-            Kala's Kitchen is a small, home-run food business
-            bringing homemade food to family, friends and local
-            customers.
-        </p>
+        <div class="card">
+            <h3>Homemade Meals</h3>
+            <p>
+                Freshly prepared homemade food made with care and love.
+            </p>
+        </div>
 
-        <p>
-            Our food is prepared with care, inspired by traditional
-            South Indian flavours and family recipes.
-        </p>
+        <div class="card">
+            <h3>South Indian Flavours</h3>
+            <p>
+                Traditional recipes and comforting flavours inspired by home.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Catering</h3>
+            <p>
+                Homemade food for small family gatherings and special occasions.
+            </p>
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
     <h2>Get in Touch 🌸</h2>
 
     <p>
-        Interested in our food or catering?
+        Interested in ordering homemade food?
     </p>
 
     <p>
-        Contact us to find out more or place a pre-order.
+        📞 <strong>07440 410566</strong>
     </p>
 
-    <div class="contact-phone">
-        07440 410566
-    </div>
+    <p>
+        Pre-orders only.
+    </p>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
-    <p>
-        © 2026 Kala's Kitchen · Homemade with love ❤️
-    </p>
+    <p>© 2026 Kala's Kitchen</p>
+
+    <p>Homemade food, made with love ❤️</p>
 
 </footer>
-
 
 </body>
 </html>
