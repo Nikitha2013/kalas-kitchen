@@ -181,8 +181,21 @@
         .menu-grid {
             max-width: 1100px;
             margin: auto;
-            columns: 2;
-            column-gap: 25px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            align-items: start;
+        }
+
+        /* Keep Non-Veg Curries aligned with Starters & Sides */
+        .menu-card:nth-child(5) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .menu-card:nth-child(1) {
+            grid-column: 1;
+            grid-row: 1;
         }
 
         .menu-card {
@@ -193,6 +206,7 @@
             border: 1px solid #f3dce1;
             break-inside: avoid;
             margin-bottom: 25px;
+            align-self: start;
         }
 
         .menu-card h3 {
@@ -299,20 +313,6 @@
             color: #9e4d60;
         }
 
-        <!-- SPECIAL MENU -->
-
-<section class="menu-section" id="special-menu">
-
-    <div class="menu-intro">
-
-        <h2>Special Menu ✨</h2>
-
-        <p>Special menu coming out soon — only for special occasions.</p>
-
-    </div>
-
-</section>
-        
         /* CONTACT */
 
         .contact {
@@ -349,7 +349,13 @@
         @media (max-width: 750px) {
 
             .menu-grid {
-                columns: 1;
+                grid-template-columns: 1fr;
+            }
+
+            .menu-card:nth-child(1),
+            .menu-card:nth-child(5) {
+                grid-column: auto;
+                grid-row: auto;
             }
 
             .header-content {
@@ -401,6 +407,7 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#menu">Our Menu</a>
+            <a href="#special-menu">Special Menu</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -1057,6 +1064,16 @@
 </section>
 
 
+<!-- SPECIAL MENU -->
+
+<section class="menu-section" id="special-menu">
+    <div class="menu-intro">
+        <h2>Special Menu ✨</h2>
+        <p>Special menu coming out soon — only for special occasions.</p>
+    </div>
+</section>
+
+
 <!-- ABOUT -->
 
 <section class="section" id="about">
@@ -1102,17 +1119,11 @@
 
     <h2>Get in Touch 🌸</h2>
 
-    <p>
-        Interested in ordering homemade food?
-    </p>
+    <p>Interested in ordering homemade food?</p>
 
-    <p>
-        📞 <strong>07440 410566</strong>
-    </p>
+    <p>📞 <strong>07440 410566</strong></p>
 
-    <p>
-        Pre-orders only.
-    </p>
+    <p>Pre-orders only.</p>
 
 </section>
 
