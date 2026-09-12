@@ -176,21 +176,20 @@
             color: #6b4a4a;
         }
 
-        /* TWO COLUMNS — NATURAL CARD HEIGHTS */
-
         .menu-grid {
             max-width: 1100px;
             margin: auto;
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             gap: 25px;
-            align-items: start;
+            align-items: stretch;
         }
 
         .menu-column {
             display: flex;
             flex-direction: column;
             gap: 25px;
+            min-height: 100%;
         }
 
         .menu-card {
@@ -259,6 +258,10 @@
             background: #f5d6dc;
             border: 1px solid #efd0d7;
             text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .heart-feature h3 {
@@ -300,15 +303,15 @@
         }
 
         .feature-aligned {
-            margin-top: -5px;
+            margin-top: auto;
         }
 
         /* PRE-ORDER */
 
         .preorder-box {
-            max-width: 700px;
-            margin: 45px auto 0;
-            padding: 30px 25px;
+            max-width: 900px;
+            margin: 55px auto 0;
+            padding: 30px 35px;
             background: #f5d6dc;
             border-radius: 20px;
             text-align: center;
@@ -450,6 +453,10 @@
             .brand h1 {
                 font-size: 28px;
             }
+
+            .preorder-box {
+                max-width: 100%;
+            }
         }
 
         @media (max-width: 500px) {
@@ -547,126 +554,91 @@
                 <hr class="menu-divider">
 
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Methu Vadai</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                     <p class="menu-description">
                         4 pieces with chutney
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Paruppu Vadai</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                     <p class="menu-description">
                         4 pieces with chutney
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Gobi Manchurian</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chicken Chukka</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Egg Paniyaram</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                     <p class="menu-description">
                         12 pieces
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lamb Chukka</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>King Fish Fry</span>
                         <span class="menu-price">£7.00</span>
                     </div>
-
                     <p class="menu-description">
                         1 large or 2 medium pieces
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Fritatta</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                     <p class="menu-description">
                         8 slices — vegetables, egg & cheese
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Aviyal</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Onion Bajji</span>
                         <span class="menu-price">£3.50</span>
                     </div>
-
                     <p class="menu-description">
                         250g
                     </p>
-
                 </div>
 
             </div>
@@ -684,84 +656,61 @@
 
                 <hr class="menu-divider">
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Vegetable Biriyani</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chicken Biriyani</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                     <p class="menu-description">
                         Basmati Rice
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chicken Biriyani</span>
                         <span class="menu-price">£7.00</span>
                     </div>
-
                     <p class="menu-description">
                         Seeraga Samba Rice
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lamb Biriyani</span>
                         <span class="menu-price">£8.00</span>
                     </div>
-
                     <p class="menu-description">
                         Basmati Rice
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lamb Biriyani</span>
                         <span class="menu-price">£9.00</span>
                     </div>
-
                     <p class="menu-description">
                         Seeraga Samba Rice
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Fish Biriyani</span>
                         <span class="menu-price">£10.00</span>
                     </div>
-
                     <p class="menu-description">
                         King Fish Cubes, Basmati
                     </p>
-
                 </div>
 
             </div>
@@ -779,135 +728,97 @@
 
                 <hr class="menu-divider">
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lemon Rice</span>
                         <span class="menu-price">£2.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Tamarind Rice</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Bisibele Bath</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Coconut Rice</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Coconut Milk Rice & Veg Kurma</span>
                         <span class="menu-price">£7.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Coconut Milk Rice & Lamb Curry</span>
                         <span class="menu-price">£8.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chappathi</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                     <p class="menu-description">
                         5 Nos
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Idiyappam</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                     <p class="menu-description">
                         4 Nos
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Veg Kothu Parotta</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Egg Kothu Parotta</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chicken Kothu Parotta</span>
                         <span class="menu-price">£7.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lamb Kothu Parotta</span>
                         <span class="menu-price">£8.00</span>
                     </div>
-
                 </div>
 
-          </div>
+            </div>
 
 
             <!-- HOME COOKED -->
@@ -917,7 +828,6 @@
                 <div class="halal-feature">
                     <span class="halal-badge">HALAL ✓</span>
                 </div>
-
 
                 <div class="menu-card heart-feature">
 
@@ -940,8 +850,9 @@
 
         </div>
 
+
         <!-- RIGHT COLUMN -->
-        
+
         <div class="menu-column">
 
             <!-- NON VEG CURRIES -->
@@ -956,88 +867,63 @@
 
                 <hr class="menu-divider">
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chicken Curry</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Butter Chicken</span>
                         <span class="menu-price">£6.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chettinad Chicken</span>
                         <span class="menu-price">£6.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Prawn Curry</span>
                         <span class="menu-price">£7.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Paya</span>
                         <span class="menu-price">£7.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lamb Curry</span>
                         <span class="menu-price">£8.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chettinad Lamb</span>
                         <span class="menu-price">£8.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Fish Curry</span>
                         <span class="menu-price">£9.00</span>
                     </div>
-
                     <p class="menu-description">
                         King Fish / Salmon
                     </p>
-
                 </div>
 
             </div>
@@ -1055,88 +941,63 @@
 
                 <hr class="menu-divider">
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Vegetable Kurma</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Chana Masala</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Pav Bhaji Masala</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Muttai Kulambu</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                     <p class="menu-description">
                         Broken eggs
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Paruppu Urundai Kulambu</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Aloo Matar Curry</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Paneer Butter Masala</span>
                         <span class="menu-price">£6.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Matar Paneer</span>
                         <span class="menu-price">£6.50</span>
                     </div>
-
                 </div>
 
             </div>
@@ -1154,194 +1015,139 @@
 
                 <hr class="menu-divider">
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Kesari</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Vermicelli Payasam</span>
                         <span class="menu-price">£3.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Paruppu Payasam</span>
                         <span class="menu-price">£3.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Pineapple Kesari</span>
                         <span class="menu-price">£3.50</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Kuli Paniyaram</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                     <p class="menu-description">
                         Sweet — 12 Pieces
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Muttai Mittai</span>
                         <span class="menu-price">£4.50</span>
                     </div>
-
                     <p class="menu-description">
                         250g
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Sweet Poli</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                     <p class="menu-description">
                         Wheat flour & chickpeas — 5 nos
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Ghee Mysurpa</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                     <p class="menu-description">
                         250g
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Tea Cake</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                     <p class="menu-description">
                         Approx. 400g
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Rose Cookies</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                     <p class="menu-description">
                         Achu Murukku — 15 Pieces
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Ulundhu Kali</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Mixture</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                     <p class="menu-description">
                         500g
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Seeyam / Suzhiyam</span>
                         <span class="menu-price">£6.00</span>
                     </div>
-
                     <p class="menu-description">
                         8 Pieces
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Salna</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                     <p class="menu-description">
                         Plain
                     </p>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Lemon Drizzle Cake</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                     <p class="menu-description">
                         Approx. 250g
                     </p>
-
                 </div>
 
             </div>
@@ -1359,27 +1165,26 @@
 
                 <hr class="menu-divider">
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Mango Lassi</span>
                         <span class="menu-price">£2.00</span>
                     </div>
-
                 </div>
 
-
                 <div class="menu-item">
-
                     <div class="menu-item-top">
                         <span>Jigarthanda</span>
                         <span class="menu-price">£4.00</span>
                     </div>
-
                 </div>
 
             </div>
+
+        </div>
+
+    </div>
+
 
     <!-- PRE-ORDERS -->
 
@@ -1433,7 +1238,6 @@
         prepared with care using traditional flavours and family recipes.
     </p>
 
-
     <div class="cards">
 
         <div class="card">
@@ -1482,7 +1286,6 @@
     <p>
         A little taste of what we make at Kala's Kitchen.
     </p>
-
 
     <div class="food-gallery-grid">
 
