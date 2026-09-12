@@ -253,6 +253,52 @@
             border: none;
         }
 
+        /* DRINKS CARD SPECIAL LAYOUT */
+
+        .drinks-card-wrapper {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .drinks-header {
+            min-width: 150px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .drinks-header h3 {
+            margin: 0;
+            color: #9e4d60;
+            font-size: 23px;
+        }
+
+        .drinks-header .menu-tagline {
+            margin: 0;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .halal-badge {
+            display: inline-block;
+            padding: 7px 17px;
+            border: 1px solid #c9a45c;
+            border-radius: 999px;
+            background: #fffaf2;
+            color: #9e4d60;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .drinks-items {
+            flex: 1;
+        }
+
         /* HOME-COOKED FEATURE */
 
         .heart-feature {
@@ -285,18 +331,6 @@
         .halal-feature {
             text-align: center;
             margin-bottom: 12px;
-        }
-
-        .halal-badge {
-            display: inline-block;
-            padding: 7px 17px;
-            border: 1px solid #c9a45c;
-            border-radius: 999px;
-            background: #fffaf2;
-            color: #9e4d60;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 1px;
         }
 
         .feature-aligned {
@@ -449,6 +483,14 @@
 
             .brand h1 {
                 font-size: 28px;
+            }
+
+            .drinks-card-wrapper {
+                flex-direction: column;
+            }
+
+            .drinks-header {
+                min-width: auto;
             }
         }
 
@@ -1006,10 +1048,6 @@
                         <span class="menu-price">£9.00</span>
                     </div>
 
-                    <p class="menu-description">
-                        King Fish / Salmon
-                    </p>
-
                 </div>
 
             </div>
@@ -1019,10 +1057,10 @@
 
             <div class="menu-card">
 
-                <h3>Veg Curries ✦</h3>
+                <h3>Veg Curries 🌸</h3>
 
                 <p class="menu-tagline">
-                    Comforting flavours from the heart of the kitchen.
+                    Garden-fresh and flavourful.
                 </p>
 
                 <hr class="menu-divider">
@@ -1031,7 +1069,7 @@
                 <div class="menu-item">
 
                     <div class="menu-item-top">
-                        <span>Vegetable Kurma</span>
+                        <span>Veg Kurma</span>
                         <span class="menu-price">£5.00</span>
                     </div>
 
@@ -1041,52 +1079,8 @@
                 <div class="menu-item">
 
                     <div class="menu-item-top">
-                        <span>Chana Masala</span>
-                        <span class="menu-price">£5.00</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Pav Bhaji Masala</span>
-                        <span class="menu-price">£5.00</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Muttai Kulambu</span>
-                        <span class="menu-price">£6.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        Broken eggs
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Paruppu Urundai Kulambu</span>
-                        <span class="menu-price">£5.00</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Aloo Matar Curry</span>
-                        <span class="menu-price">£5.00</span>
+                        <span>Veg Chettinadu</span>
+                        <span class="menu-price">£5.50</span>
                     </div>
 
                 </div>
@@ -1105,214 +1099,9 @@
                 <div class="menu-item">
 
                     <div class="menu-item-top">
-                        <span>Matar Paneer</span>
-                        <span class="menu-price">£6.50</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- SWEETS & SNACKS -->
-
-            <div class="menu-card">
-
-                <h3>Sweets & Snacks 🌸</h3>
-
-                <p class="menu-tagline">
-                    A little sweetness for every occasion.
-                </p>
-
-                <hr class="menu-divider">
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Kesari</span>
-                        <span class="menu-price">£3.00</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Vermicelli Payasam</span>
-                        <span class="menu-price">£3.00</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Paruppu Payasam</span>
-                        <span class="menu-price">£3.50</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Pineapple Kesari</span>
-                        <span class="menu-price">£3.50</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Kuli Paniyaram</span>
-                        <span class="menu-price">£4.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        Sweet — 12 Pieces
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Muttai Mittai</span>
-                        <span class="menu-price">£4.50</span>
-                    </div>
-
-                    <p class="menu-description">
-                        250g
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Sweet Poli</span>
-                        <span class="menu-price">£4.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        Wheat flour & chickpeas — 5 nos
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Ghee Mysurpa</span>
-                        <span class="menu-price">£4.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        250g
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Tea Cake</span>
+                        <span>Chana Masala</span>
                         <span class="menu-price">£5.00</span>
                     </div>
-
-                    <p class="menu-description">
-                        Approx. 400g
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Rose Cookies</span>
-                        <span class="menu-price">£4.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        Achu Murukku — 15 Pieces
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Ulundhu Kali</span>
-                        <span class="menu-price">£5.00</span>
-                    </div>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Mixture</span>
-                        <span class="menu-price">£6.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        500g
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Seeyam / Suzhiyam</span>
-                        <span class="menu-price">£6.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        8 Pieces
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Salna</span>
-                        <span class="menu-price">£4.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        Plain
-                    </p>
-
-                </div>
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Lemon Drizzle Cake</span>
-                        <span class="menu-price">£4.00</span>
-                    </div>
-
-                    <p class="menu-description">
-                        Approx. 250g
-                    </p>
 
                 </div>
 
@@ -1323,105 +1112,51 @@
 
             <div class="menu-card">
 
-                <h3>Drinks 🥭</h3>
+                <div class="drinks-card-wrapper">
 
-                <p class="menu-tagline">
-                    Cool, creamy and refreshing.
-                </p>
-
-                <hr class="menu-divider">
-
-
-                <div class="menu-item">
-
-                    <div class="menu-item-top">
-                        <span>Mango Lassi</span>
-                        <span class="menu-price">£2.00</span>
+                    <div class="drinks-header">
+                        <h3>Drinks 🥤</h3>
+                        <p class="menu-tagline">Refreshing & cooling.</p>
+                        <span class="halal-badge">HALAL CERTIFIED</span>
                     </div>
 
-                </div>
+                    <div class="drinks-items">
+                        <hr class="menu-divider">
 
+                        <div class="menu-item">
+                            <div class="menu-item-top">
+                                <span>Mango Lassi</span>
+                                <span class="menu-price">£3.50</span>
+                            </div>
+                        </div>
 
-                <div class="menu-item">
+                        <div class="menu-item">
+                            <div class="menu-item-top">
+                                <span>Masala Chai</span>
+                                <span class="menu-price">£2.50</span>
+                            </div>
+                        </div>
 
-                    <div class="menu-item-top">
-                        <span>Jigarthanda</span>
-                        <span class="menu-price">£4.00</span>
+                        <div class="menu-item">
+                            <div class="menu-item-top">
+                                <span>Fresh Lemonade</span>
+                                <span class="menu-price">£3.00</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-item-top">
+                                <span>Coconut Water</span>
+                                <span class="menu-price">£2.50</span>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- HOME COOKED -->
-
-            <div class="feature-aligned">
-
-                <div class="halal-feature">
-                    <span class="halal-badge">HALAL ✓</span>
-                </div>
-
-
-                <div class="menu-card heart-feature">
-
-                    <div class="heart-line">
-                        ♡ ✦ ♡
-                    </div>
-
-                    <h3>
-                        Home-cooked, heart-served
-                    </h3>
-
-                    <p>
-                        Traditional recipes, generous flavours and food
-                        prepared with the same care we'd serve at home. ❤️
-                    </p>
 
                 </div>
 
             </div>
 
         </div>
-
-    </div>
-
-
-    <!-- PRE-ORDERS -->
-
-    <div class="preorder-box">
-
-        <h3>
-            <span class="gold-heart">♡</span>
-            Pre-Orders Only
-            <span class="gold-heart">♡</span>
-        </h3>
-
-        <p>
-            Everything is homemade fresh with care,
-            so please place your order in advance.
-        </p>
-
-        <p class="phone">
-            📞 07440 410566
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- SPECIAL MENU -->
-
-<section class="menu-section" id="special-menu">
-
-    <div class="menu-intro">
-
-        <h2>Special Menu ✨</h2>
-
-        <p>
-            Special menu coming out soon — only for special occasions.
-        </p>
 
     </div>
 
@@ -1432,44 +1167,38 @@
 
 <section class="section" id="about">
 
-    <h2>About Kala's Kitchen</h2>
-
-    <p>
-        Kala's Kitchen is all about homemade South Indian food,
-        prepared with care using traditional flavours and family recipes.
-    </p>
-
+    <h2>Homemade with ❤️</h2>
 
     <div class="cards">
 
-        <div class="card">
+        <div class="card heart-feature">
 
-            <h3>Homemade Meals</h3>
+            <div class="heart-line">
+                ♡ ♡ ♡
+            </div>
+
+            <h3>Homemade Love</h3>
 
             <p>
-                Freshly prepared homemade food made with care and love.
+                Every dish is prepared with care and tradition,
+                just like home-cooked meals. We use family recipes
+                passed down through generations.
             </p>
 
         </div>
 
+        <div class="card halal-feature">
 
-        <div class="card">
+            <div class="halal-badge">
+                HALAL CERTIFIED
+            </div>
 
-            <h3>South Indian Flavours</h3>
-
-            <p>
-                Traditional recipes and comforting flavours inspired by home.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>Catering</h3>
+            <h3 class="feature-aligned">Halal Certified</h3>
 
             <p>
-                Homemade food for small family gatherings and special occasions.
+                All our food is Halal certified,
+                prepared with the highest standards of care
+                and respect for our community.
             </p>
 
         </div>
@@ -1479,92 +1208,21 @@
 </section>
 
 
-<!-- FOOD GALLERY -->
+<!-- PRE-ORDER -->
 
-<section class="section" id="food-gallery">
+<section class="menu-section">
 
-    <h2>From Our Kitchen</h2>
+    <div class="preorder-box">
 
-    <p>
-        A little taste of what we make at Kala's Kitchen.
-    </p>
+        <h3>Pre-Order Your Meal</h3>
 
+        <p>
+            Want to ensure your favourite dish is ready? Pre-order now and pick it up at your convenience!
+        </p>
 
-    <div class="food-gallery-grid">
-
-        <div class="food-photo-card">
-
-            <div class="food-photo-placeholder">
-                <span>Starters & Sides</span>
-            </div>
-
-            <h3>Starters & Sides</h3>
-
-            <p>
-                Little bites, big flavours.
-            </p>
-
-        </div>
-
-
-        <div class="food-photo-card">
-
-            <div class="food-photo-placeholder">
-                <span>Biriyani</span>
-            </div>
-
-            <h3>Biriyani</h3>
-
-            <p>
-                Fragrant rice, rich spices, made with care.
-            </p>
-
-        </div>
-
-
-        <div class="food-photo-card">
-
-            <div class="food-photo-placeholder">
-                <span>Rice & Breads</span>
-            </div>
-
-            <h3>Rice & Breads</h3>
-
-            <p>
-                Homemade favourites, made to be shared.
-            </p>
-
-        </div>
-
-
-        <div class="food-photo-card">
-
-            <div class="food-photo-placeholder">
-                <span>Veg Curries</span>
-            </div>
-
-            <h3>Veg Curries</h3>
-
-            <p>
-                Comforting flavours from the heart of the kitchen.
-            </p>
-
-        </div>
-
-
-        <div class="food-photo-card">
-
-            <div class="food-photo-placeholder">
-                <span>Non-Veg Curries</span>
-            </div>
-
-            <h3>Non-Veg Curries</h3>
-
-            <p>
-                Rich, aromatic and full of tradition.
-            </p>
-
-        </div>
+        <p class="phone">
+            📞 Call us on: <strong>07123 456789</strong>
+        </p>
 
     </div>
 
@@ -1575,37 +1233,33 @@
 
 <section class="contact" id="contact">
 
-    <h2>Get in Touch 🌸</h2>
+    <h2>Get in Touch</h2>
 
     <p>
-        Interested in ordering homemade food?
+        📍 <strong>Location:</strong> 123 High Street, Manchester, M1 1AA
     </p>
 
     <p>
-        📞 <strong>07440 410566</strong>
+        ⏰ <strong>Hours:</strong> Tuesday - Sunday, 11am - 9pm (Closed Mondays)
     </p>
 
     <p>
-        Pre-orders only.
+        📱 <strong>Phone:</strong> 07123 456789
+    </p>
+
+    <p>
+        📧 <strong>Email:</strong> info@kalaskitchen.com
     </p>
 
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
-
-    <p>
-        © 2026 Kala's Kitchen
-    </p>
-
-    <p>
-        Homemade food, made with love ❤️
-    </p>
-
-    <p class="creator-credit">
-        Website designed &amp; created by Nikitha ✨
-    </p>
-
+    <p><strong>Kala's Kitchen</strong></p>
+    <p>Homemade South Indian Food</p>
+    <p>Bringing traditional flavours to your table 🌸</p>
+    <p class="creator-credit">Built with love for food lovers</p>
 </footer>
+
+</body>
+</html>
