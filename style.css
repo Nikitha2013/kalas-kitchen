@@ -991,3 +991,59 @@ footer p {
     }
 
 }
+
+/* =========================
+   LOADING ANIMATION
+========================= */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #fff9f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+    animation: loaderFloat 1.4s ease-in-out infinite;
+}
+
+.loader-content img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.loader-content p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #d98c9a;
+}
+
+.loader-content span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #777;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes loaderFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
