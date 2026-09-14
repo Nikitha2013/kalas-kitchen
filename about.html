@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +12,23 @@
 </head>
 
 <body>
+
+    <!-- LOADING SCREEN -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <img src="logo.png" alt="Kala's Kitchen">
+
+            <p>Kala's Kitchen</p>
+
+            <span>Homemade with love ❤️</span>
+
+        </div>
+
+    </div>
+
 
     <!-- HEADER -->
 
@@ -259,12 +275,29 @@
         <p>Homemade food, made with love ❤️</p>
 
         <p class="creator-credit">
-    Website designed &amp; created by Nikitha ✨
-</p>
+            Website designed &amp; created by Nikitha ✨
+        </p>
 
     </footer>
+
+
+    <!-- LOADING SCREEN SCRIPT -->
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                document.getElementById("loader").classList.add("loader-hidden");
+
+            }, 900);
+
+        });
+
+    </script>
+
 
 </body>
 
 </html>
-```
