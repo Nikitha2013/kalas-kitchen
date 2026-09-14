@@ -1,3 +1,4 @@
+```css
 * {
     box-sizing: border-box;
 }
@@ -13,7 +14,9 @@ body {
     color: #4a3030;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
     background: #d98c9a;
@@ -65,14 +68,16 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     margin-left: 22px;
-    transition: 0.2s ease;
+    transition: 0.25s ease;
 }
 
 nav a:hover {
     color: #fff0f3;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     text-align: center;
@@ -106,7 +111,53 @@ nav a:hover {
     margin: 0 7px;
 }
 
-/* GENERAL SECTIONS */
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.main-button,
+.secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.main-button {
+    background: #b85c70;
+    color: white;
+    border: 2px solid #b85c70;
+}
+
+.main-button:hover {
+    background: #9e4d60;
+    border-color: #9e4d60;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(100, 50, 60, 0.18);
+}
+
+.secondary-button {
+    background: white;
+    color: #b85c70;
+    border: 2px solid #d9a1ac;
+}
+
+.secondary-button:hover {
+    background: #f9e8eb;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
     padding: 65px 20px;
@@ -125,7 +176,9 @@ nav a:hover {
     line-height: 1.7;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .cards {
     display: flex;
@@ -142,6 +195,13 @@ nav a:hover {
     border-radius: 18px;
     box-shadow: 0 5px 15px rgba(100, 50, 60, 0.12);
     border: 1px solid #f3dce1;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(100, 50, 60, 0.16);
 }
 
 .card h3 {
@@ -152,7 +212,9 @@ nav a:hover {
     line-height: 1.5;
 }
 
-/* PAGE TITLE */
+/* =========================
+   PAGE TITLE
+========================= */
 
 .page-title {
     text-align: center;
@@ -170,7 +232,9 @@ nav a:hover {
     color: #6b4a4a;
 }
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 .menu-section {
     padding: 30px 20px 70px;
@@ -199,6 +263,13 @@ nav a:hover {
     box-shadow: 0 5px 18px rgba(100, 50, 60, 0.10);
     border: 1px solid #f3dce1;
     margin-bottom: 25px;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(100, 50, 60, 0.15);
 }
 
 .menu-card h3 {
@@ -251,7 +322,9 @@ nav a:hover {
     border: none;
 }
 
-/* HOME COOKED FEATURE */
+/* =========================
+   HOME COOKED FEATURE
+========================= */
 
 .heart-feature {
     background: #f5d6dc;
@@ -278,7 +351,9 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
-/* HALAL */
+/* =========================
+   HALAL
+========================= */
 
 .halal-feature {
     text-align: center;
@@ -297,7 +372,9 @@ nav a:hover {
     letter-spacing: 1px;
 }
 
-/* PRE-ORDER */
+/* =========================
+   PRE-ORDER
+========================= */
 
 .preorder-box {
     max-width: 900px;
@@ -324,7 +401,61 @@ nav a:hover {
     color: #9e4d60;
 }
 
-/* CONTACT */
+/* =========================
+   HOME FOOD GALLERY
+========================= */
+
+.home-gallery {
+    max-width: 900px;
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gallery-placeholder {
+    min-height: 180px;
+    padding: 25px 15px;
+
+    background: white;
+    border: 1px solid #f3dce1;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(100, 50, 60, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-placeholder:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 20px rgba(100, 50, 60, 0.15);
+}
+
+.gallery-placeholder span {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.gallery-placeholder p {
+    margin: 0;
+    color: #9e4d60;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.section-button {
+    margin-top: 30px;
+}
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact-box {
     max-width: 700px;
@@ -352,7 +483,9 @@ nav a:hover {
     color: #9e4d60;
 }
 
-/* FOOD GALLERY */
+/* =========================
+   FOOD GALLERY
+========================= */
 
 .food-gallery-grid {
     max-width: 1100px;
@@ -368,6 +501,13 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0 5px 18px rgba(100, 50, 60, 0.10);
     border: 1px solid #f3dce1;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.food-photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(100, 50, 60, 0.16);
 }
 
 .food-photo-placeholder {
@@ -387,6 +527,12 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+.food-photo-card:hover img {
+    transform: scale(1.03);
 }
 
 .food-photo-card h3 {
@@ -400,7 +546,9 @@ nav a:hover {
     line-height: 1.5;
 }
 
-/* SPECIAL MENU */
+/* =========================
+   SPECIAL MENU
+========================= */
 
 .special-box {
     max-width: 800px;
@@ -423,7 +571,9 @@ nav a:hover {
     font-size: 25px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #d98c9a;
@@ -442,11 +592,17 @@ footer p {
     margin-top: 12px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
 
     .food-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -482,6 +638,11 @@ footer p {
     .preorder-box {
         max-width: 100%;
     }
+
+    .home-gallery {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -501,7 +662,27 @@ footer p {
     .contact-box {
         padding: 30px 20px;
     }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-button,
+    .secondary-button {
+        width: 220px;
+    }
 }
+
+/* =========================
+   SPECIAL ALIGNMENT
+========================= */
+
 .align-with-drinks {
     margin-top: auto;
 }
+```
