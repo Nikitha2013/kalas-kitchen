@@ -1110,3 +1110,14 @@ footer p {
     }
 
 }
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+
+nav a.active {
+    color: #fff0f3;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
