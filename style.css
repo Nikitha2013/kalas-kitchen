@@ -1004,3 +1004,279 @@ footer p {
     }
 
 }
+
+/* ABOUT PAGE - NEW STORY DESIGN */
+
+.about-hero {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f9e4e8, #fff9f5);
+}
+
+.about-hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-small-title {
+    color: #c9a45c;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    margin: 0 0 20px;
+}
+
+.about-hero h2 {
+    color: #b85c70;
+    font-size: 52px;
+    line-height: 1.15;
+    margin: 0 0 25px;
+}
+
+.about-hero-content > p:last-child {
+    max-width: 720px;
+    margin: auto;
+    font-size: 21px;
+    line-height: 1.7;
+    color: #6b4a4a;
+}
+
+
+/* MAIN STORY */
+
+.about-story-section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 90px 20px;
+}
+
+.about-story-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.about-label {
+    color: #c9a45c;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    margin: 0 0 12px;
+}
+
+.about-story-heading h2 {
+    color: #b85c70;
+    font-size: 40px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.about-story-main {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-story-main p {
+    font-size: 20px;
+    line-height: 1.85;
+    color: #6b4a4a;
+    margin: 0 0 20px;
+}
+
+
+/* STORY STEPS */
+
+.story-steps {
+    margin: 65px auto 0;
+    max-width: 900px;
+}
+
+.story-step {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 25px;
+    align-items: center;
+    padding: 28px 30px;
+    margin-bottom: 18px;
+    background: white;
+    border: 1px solid #f3dce1;
+    border-radius: 20px;
+    box-shadow: 0 5px 16px rgba(100, 50, 60, 0.08);
+    transition: 0.2s ease;
+}
+
+.story-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(100, 50, 60, 0.13);
+}
+
+.story-step-number {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #f5d6dc;
+    border: 1px solid #efd0d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9e4d60;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.story-step h3 {
+    color: #9e4d60;
+    font-size: 23px;
+    margin: 0 0 8px;
+}
+
+.story-step p {
+    color: #806666;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* FAMILY BOX */
+
+.about-family-box {
+    max-width: 900px;
+    margin: 55px auto 0;
+    padding: 35px 40px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #f5d6dc;
+    border: 1px solid #efd0d7;
+    border-radius: 22px;
+}
+
+.about-family-heart {
+    color: #c9a45c;
+    font-size: 45px;
+    flex-shrink: 0;
+}
+
+.about-family-box h3 {
+    color: #9e4d60;
+    font-size: 25px;
+    margin: 0 0 8px;
+}
+
+.about-family-box p {
+    color: #6b4a4a;
+    font-size: 17px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* FINAL ABOUT SECTION */
+
+.about-final {
+    text-align: center;
+    padding: 90px 20px;
+    background: #f9e4e8;
+}
+
+.about-final h2 {
+    color: #b85c70;
+    font-size: 40px;
+    margin: 0 0 15px;
+}
+
+.about-final > p:not(.about-label) {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #6b4a4a;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* ABOUT MOBILE */
+
+@media (max-width: 750px) {
+
+    .about-hero {
+        padding: 75px 20px;
+    }
+
+    .about-hero h2 {
+        font-size: 38px;
+    }
+
+    .about-hero-content > p:last-child {
+        font-size: 18px;
+    }
+
+    .about-story-section {
+        padding: 65px 20px;
+    }
+
+    .about-story-heading h2 {
+        font-size: 32px;
+    }
+
+    .about-story-main p {
+        font-size: 18px;
+    }
+
+    .story-step {
+        grid-template-columns: 65px 1fr;
+        gap: 18px;
+        padding: 23px;
+    }
+
+    .story-step-number {
+        width: 55px;
+        height: 55px;
+        font-size: 14px;
+    }
+
+    .story-step h3 {
+        font-size: 20px;
+    }
+
+    .story-step p {
+        font-size: 16px;
+    }
+
+    .about-family-box {
+        padding: 28px;
+    }
+
+    .about-final {
+        padding: 70px 20px;
+    }
+
+    .about-final h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .about-hero h2 {
+        font-size: 32px;
+    }
+
+    .story-step {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .story-step-number {
+        margin: auto;
+    }
+
+    .about-family-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
