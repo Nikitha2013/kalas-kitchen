@@ -14,6 +14,23 @@
 
 <body>
 
+<!-- LOADING SCREEN -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <img src="logo.png" alt="Kala's Kitchen">
+
+        <p>Kala's Kitchen</p>
+
+        <span>Homemade with love ❤️</span>
+
+    </div>
+
+</div>
+
+
 <header>
     <div class="header-content">
 
@@ -37,6 +54,7 @@
     </div>
 </header>
 
+
 <section class="page-title">
 
     <h2>Get in Touch 🌸</h2>
@@ -46,6 +64,7 @@
     </p>
 
 </section>
+
 
 <section class="section">
 
@@ -74,6 +93,7 @@
 
 </section>
 
+
 <footer>
 
     <p>© 2026 Kala's Kitchen</p>
@@ -85,6 +105,24 @@
     </p>
 
 </footer>
+
+
+<!-- LOADING SCREEN SCRIPT -->
+
+<script>
+
+    window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+            document.getElementById("loader").classList.add("loader-hidden");
+
+        }, 900);
+
+    });
+
+</script>
+
 
 </body>
 </html>
