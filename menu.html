@@ -697,6 +697,37 @@ Website designed &amp; created by Nikitha ✨
 </script>
 
 
+    <!-- SCROLL TO TOP BUTTON -->
+
+<button id="scrollTop" aria-label="Scroll to top">
+    ↑
+</button>
+
+<script>
+
+    const scrollTopButton = document.getElementById("scrollTop");
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 300) {
+            scrollTopButton.classList.add("show");
+        } else {
+            scrollTopButton.classList.remove("show");
+        }
+
+    });
+
+    scrollTopButton.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+</script>
+    
 </body>
 </html>
 ```
