@@ -1098,3 +1098,15 @@ footer p {
     background: #f9e8eb;
     transform: translateY(-3px);
 }
+
+@media (max-width: 500px) {
+
+    #scrollTop {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
