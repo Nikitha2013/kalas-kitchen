@@ -36,27 +36,58 @@
 
 <body>
 
+<!-- LOADING SCREEN -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <img src="logo.png" alt="Kala's Kitchen">
+
+        <p>Kala's Kitchen</p>
+
+        <span>Homemade with love ❤️</span>
+
+    </div>
+
+</div>
+
+
 <header>
+
     <div class="header-content">
 
         <div class="brand">
+
             <img src="logo.png" alt="Kala's Kitchen logo">
 
             <div>
+
                 <h1>Kala's Kitchen</h1>
+
                 <p>Homemade food, made with love ❤️</p>
+
             </div>
+
         </div>
 
+
         <nav>
+
             <a href="index.html">Home</a>
+
             <a href="menu.html">Our Menu</a>
+
             <a href="special-menu.html">Special Menu</a>
+
             <a href="about.html">About</a>
+
             <a href="contact.html">Contact</a>
+
         </nav>
 
     </div>
+
 </header>
 
 
@@ -72,10 +103,15 @@
     </p>
 
     <p class="hero-tagline">
+
         <span class="gold-heart">♡</span>
+
         Traditional flavours, homemade with care.
+
         <span class="gold-heart">♡</span>
+
     </p>
+
 
     <div class="hero-buttons">
 
@@ -103,27 +139,39 @@
         family recipes and plenty of care.
     </p>
 
+
     <div class="cards">
 
         <div class="card">
+
             <h3>Homemade Meals</h3>
+
             <p>
                 Freshly prepared homemade food made with care and love.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>South Indian Flavours</h3>
+
             <p>
                 Traditional recipes and comforting flavours inspired by home.
             </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>Catering</h3>
+
             <p>
                 Homemade food for small family gatherings and special occasions.
             </p>
+
         </div>
 
     </div>
@@ -141,24 +189,37 @@
         Take a little look at the food we prepare at Kala's Kitchen.
     </p>
 
+
     <div class="home-gallery">
 
         <div class="gallery-placeholder">
+
             <span>🍛</span>
+
             <p>Food photos coming soon!</p>
+
         </div>
 
+
         <div class="gallery-placeholder">
+
             <span>🏡</span>
+
             <p>Homemade with love ❤️</p>
+
         </div>
 
+
         <div class="gallery-placeholder">
+
             <span>🌸</span>
+
             <p>From our kitchen to yours</p>
+
         </div>
 
     </div>
+
 
     <div class="section-button">
 
@@ -184,6 +245,24 @@
     </p>
 
 </footer>
+
+
+<!-- LOADING SCREEN SCRIPT -->
+
+<script>
+
+    window.addEventListener("load", function () {
+
+        setTimeout(function () {
+
+            document.getElementById("loader").classList.add("loader-hidden");
+
+        }, 900);
+
+    });
+
+</script>
+
 
 </body>
 </html>
