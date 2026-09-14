@@ -1,4 +1,3 @@
-```css
 * {
     box-sizing: border-box;
 }
@@ -13,6 +12,7 @@ body {
     background: #fff9f5;
     color: #4a3030;
 }
+
 
 /* =========================
    HEADER
@@ -75,6 +75,7 @@ nav a:hover {
     color: #fff0f3;
 }
 
+
 /* =========================
    HERO
 ========================= */
@@ -111,7 +112,10 @@ nav a:hover {
     margin: 0 7px;
 }
 
-/* HERO BUTTONS */
+
+/* =========================
+   HERO BUTTONS
+========================= */
 
 .hero-buttons {
     display: flex;
@@ -155,6 +159,7 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
+
 /* =========================
    GENERAL SECTIONS
 ========================= */
@@ -176,6 +181,7 @@ nav a:hover {
     line-height: 1.7;
 }
 
+
 /* =========================
    CARDS
 ========================= */
@@ -195,7 +201,6 @@ nav a:hover {
     border-radius: 18px;
     box-shadow: 0 5px 15px rgba(100, 50, 60, 0.12);
     border: 1px solid #f3dce1;
-
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -211,6 +216,7 @@ nav a:hover {
 .card p {
     line-height: 1.5;
 }
+
 
 /* =========================
    PAGE TITLE
@@ -231,6 +237,7 @@ nav a:hover {
     font-size: 17px;
     color: #6b4a4a;
 }
+
 
 /* =========================
    MENU
@@ -263,7 +270,6 @@ nav a:hover {
     box-shadow: 0 5px 18px rgba(100, 50, 60, 0.10);
     border: 1px solid #f3dce1;
     margin-bottom: 25px;
-
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -322,6 +328,7 @@ nav a:hover {
     border: none;
 }
 
+
 /* =========================
    HOME COOKED FEATURE
 ========================= */
@@ -351,6 +358,7 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+
 /* =========================
    HALAL
 ========================= */
@@ -371,6 +379,7 @@ nav a:hover {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
 
 /* =========================
    PRE-ORDER
@@ -401,6 +410,7 @@ nav a:hover {
     color: #9e4d60;
 }
 
+
 /* =========================
    HOME FOOD GALLERY
 ========================= */
@@ -408,7 +418,6 @@ nav a:hover {
 .home-gallery {
     max-width: 900px;
     margin: 35px auto 0;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
@@ -417,18 +426,14 @@ nav a:hover {
 .gallery-placeholder {
     min-height: 180px;
     padding: 25px 15px;
-
     background: white;
     border: 1px solid #f3dce1;
     border-radius: 20px;
-
     box-shadow: 0 5px 15px rgba(100, 50, 60, 0.10);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -452,6 +457,7 @@ nav a:hover {
 .section-button {
     margin-top: 30px;
 }
+
 
 /* =========================
    CONTACT
@@ -483,6 +489,7 @@ nav a:hover {
     color: #9e4d60;
 }
 
+
 /* =========================
    FOOD GALLERY
 ========================= */
@@ -501,7 +508,6 @@ nav a:hover {
     overflow: hidden;
     box-shadow: 0 5px 18px rgba(100, 50, 60, 0.10);
     border: 1px solid #f3dce1;
-
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -527,7 +533,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
     transition: transform 0.35s ease;
 }
 
@@ -545,6 +550,7 @@ nav a:hover {
     margin: 0 20px 22px;
     line-height: 1.5;
 }
+
 
 /* =========================
    SPECIAL MENU
@@ -571,6 +577,161 @@ nav a:hover {
     font-size: 25px;
 }
 
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero {
+    padding: 90px 20px 80px;
+    text-align: center;
+    background: linear-gradient(135deg, #f9e4e8, #fff9f5);
+    border-bottom: 1px solid #f3dce1;
+}
+
+.about-hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-small-title {
+    color: #c9a45c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
+}
+
+.about-hero h2 {
+    color: #b85c70;
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.about-hero-content > p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #6b4a4a;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ABOUT STORY
+========================= */
+
+.about-story-section {
+    padding: 95px 20px 75px;
+    background: #fff9f5;
+}
+
+.about-story-heading {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.about-story-heading h2 {
+    color: #b85c70;
+    font-size: 32px;
+    line-height: 1.25;
+    margin: 0;
+}
+
+
+/* WHITE FLOATING STORY BOX */
+
+.about-story-main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 45px 60px;
+    background: white;
+    border: 1px solid #f3dce1;
+    border-radius: 26px;
+    box-shadow: 0 8px 25px rgba(100, 50, 60, 0.10);
+}
+
+.about-story-main p {
+    color: #6b4a4a;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0 0 22px;
+    text-align: left;
+}
+
+.about-story-main p:last-child {
+    margin-bottom: 0;
+}
+
+.about-story-main strong {
+    color: #9e4d60;
+}
+
+
+/* =========================
+   FAMILY PROJECT
+========================= */
+
+.about-family-box {
+    max-width: 900px;
+    margin: 45px auto 0;
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #f5d6dc;
+    border: 1px solid #efd0d7;
+    border-radius: 22px;
+    box-shadow: 0 5px 18px rgba(100, 50, 60, 0.07);
+}
+
+.about-family-heart {
+    color: #c9a45c;
+    font-size: 35px;
+    flex-shrink: 0;
+}
+
+.about-family-box h3 {
+    color: #9e4d60;
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.about-family-box p {
+    color: #6b4a4a;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================
+   ABOUT FINAL CTA
+========================= */
+
+.about-final {
+    padding: 75px 20px;
+    text-align: center;
+    background: #f9e4e8;
+    border-top: 1px solid #f3dce1;
+}
+
+.about-final h2 {
+    color: #b85c70;
+    font-size: 32px;
+    margin: 0 0 12px;
+}
+
+.about-final > p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #6b4a4a;
+    line-height: 1.7;
+}
+
+
 /* =========================
    FOOTER
 ========================= */
@@ -592,8 +753,18 @@ footer p {
     margin-top: 12px;
 }
 
+
 /* =========================
-   MOBILE
+   SPECIAL ALIGNMENT
+========================= */
+
+.align-with-drinks {
+    margin-top: auto;
+}
+
+
+/* =========================
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
@@ -605,7 +776,12 @@ footer p {
     .home-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .about-story-main {
+        max-width: 900px;
+    }
 }
+
 
 @media (max-width: 750px) {
 
@@ -643,7 +819,48 @@ footer p {
         grid-template-columns: 1fr;
         max-width: 500px;
     }
+
+
+    /* ABOUT MOBILE */
+
+    .about-hero {
+        padding: 65px 20px 55px;
+    }
+
+    .about-hero h2 {
+        font-size: 34px;
+    }
+
+    .about-story-section {
+        padding: 70px 20px 60px;
+    }
+
+    .about-story-heading {
+        margin-bottom: 35px;
+    }
+
+    .about-story-heading h2 {
+        font-size: 29px;
+    }
+
+    .about-story-main {
+        padding: 35px 35px;
+    }
+
+    .about-story-main p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .about-family-box {
+        padding: 28px;
+    }
+
+    .about-final {
+        padding: 60px 20px;
+    }
 }
+
 
 @media (max-width: 500px) {
 
@@ -676,190 +893,9 @@ footer p {
     .secondary-button {
         width: 220px;
     }
-}
-
-/* =========================
-   SPECIAL ALIGNMENT
-========================= */
-
-.align-with-drinks {
-    margin-top: auto;
-}
-```
-
-/* =========================
-   ABOUT PAGE
-========================= */
-
-.about-hero {
-    padding: 85px 20px 75px;
-    text-align: center;
-    background: linear-gradient(135deg, #f9e4e8, #fff9f5);
-    border-bottom: 1px solid #f3dce1;
-}
-
-.about-hero-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.about-small-title {
-    color: #c9a45c;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin: 0 0 15px;
-}
-
-.about-hero h2 {
-    color: #b85c70;
-    font-size: 42px;
-    line-height: 1.2;
-    margin: 0 0 18px;
-}
-
-.about-hero-content > p:last-child {
-    max-width: 650px;
-    margin: auto;
-    color: #6b4a4a;
-    font-size: 18px;
-    line-height: 1.7;
-}
 
 
-/* STORY */
-
-.about-story-section {
-    padding: 75px 20px 65px;
-    background: white;
-}
-
-.about-story-heading {
-    max-width: 800px;
-    margin: 0 auto 35px;
-    text-align: center;
-}
-
-.about-story-heading h2 {
-    color: #b85c70;
-    font-size: 31px;
-    line-height: 1.25;
-    margin: 0;
-}
-
-.about-story-main {
-    max-width: 780px;
-    margin: auto;
-}
-
-.about-story-main p {
-    color: #6b4a4a;
-    font-size: 17px;
-    line-height: 1.8;
-    margin: 0 0 20px;
-    text-align: left;
-}
-
-.about-story-main p:last-child {
-    margin-bottom: 0;
-}
-
-.about-story-main strong {
-    color: #9e4d60;
-}
-
-
-/* FAMILY PROJECT */
-
-.about-family-box {
-    max-width: 850px;
-    margin: 50px auto 0;
-    padding: 30px 35px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    background: #f5d6dc;
-    border: 1px solid #efd0d7;
-    border-radius: 22px;
-}
-
-.about-family-heart {
-    color: #c9a45c;
-    font-size: 35px;
-    flex-shrink: 0;
-}
-
-.about-family-box h3 {
-    color: #9e4d60;
-    font-size: 24px;
-    margin: 0 0 8px;
-}
-
-.about-family-box p {
-    color: #6b4a4a;
-    font-size: 16px;
-    line-height: 1.7;
-    margin: 0;
-}
-
-
-/* FINAL ABOUT SECTION */
-
-.about-final {
-    padding: 75px 20px;
-    text-align: center;
-    background: #f9e4e8;
-    border-top: 1px solid #f3dce1;
-}
-
-.about-final h2 {
-    color: #b85c70;
-    font-size: 32px;
-    margin: 0 0 12px;
-}
-
-.about-final > p {
-    max-width: 650px;
-    margin: 0 auto 25px;
-    color: #6b4a4a;
-    line-height: 1.7;
-}
-
-
-/* ABOUT MOBILE */
-
-@media (max-width: 750px) {
-
-    .about-hero {
-        padding: 65px 20px 55px;
-    }
-
-    .about-hero h2 {
-        font-size: 34px;
-    }
-
-    .about-story-section {
-        padding: 60px 20px 50px;
-    }
-
-    .about-story-main p {
-        font-size: 16px;
-        line-height: 1.75;
-    }
-
-    .about-family-box {
-        padding: 28px;
-        gap: 18px;
-    }
-
-    .about-final {
-        padding: 60px 20px;
-    }
-
-}
-
-
-@media (max-width: 500px) {
+    /* ABOUT SMALL MOBILE */
 
     .about-hero h2 {
         font-size: 29px;
@@ -868,6 +904,11 @@ footer p {
     .about-small-title {
         font-size: 11px;
         letter-spacing: 1.5px;
+    }
+
+    .about-story-main {
+        padding: 30px 24px;
+        border-radius: 22px;
     }
 
     .about-family-box {
@@ -886,5 +927,4 @@ footer p {
     .about-final h2 {
         font-size: 27px;
     }
-
 }
