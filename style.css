@@ -1047,3 +1047,54 @@ footer p {
         transform: translateY(-7px);
     }
 }
+
+/* =========================
+   SCROLL TO TOP BUTTON
+========================= */
+
+#scrollTop {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #d9a1ac;
+    border-radius: 50%;
+
+    background: #fff9f5;
+    color: #b85c70;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 15px rgba(100, 50, 60, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: opacity 0.25s ease,
+                visibility 0.25s ease,
+                transform 0.25s ease,
+                background 0.25s ease;
+}
+
+#scrollTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scrollTop:hover {
+    background: #f9e8eb;
+    transform: translateY(-3px);
+}
