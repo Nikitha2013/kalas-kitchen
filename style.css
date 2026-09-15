@@ -759,8 +759,13 @@ footer p {
    SPECIAL ALIGNMENT
 ========================= */
 
+/* =========================
+   SPECIAL ALIGNMENT
+========================= */
+
 .align-with-bottom-of-drinks {
-    transform: translateY(150px);
+    margin-top: 0;
+    transform: none;
 }
 <div class="menu-card heart-feature align-with-bottom-of-drinks">
 
