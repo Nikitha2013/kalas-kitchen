@@ -760,7 +760,7 @@ footer p {
 ========================= */
 
 .align-with-bottom-of-drinks {
-    transform: translateY(32px);
+    transform: translateY(100px);
 }
 <div class="menu-card heart-feature align-with-bottom-of-drinks">
 
