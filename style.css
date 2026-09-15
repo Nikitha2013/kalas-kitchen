@@ -369,7 +369,7 @@ nav a:hover {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 10px;
+    transform: translateY(15px);
 }
 
 .halal-badge {
