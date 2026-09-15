@@ -261,6 +261,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 0;
+    height: 100%;
 }
 
 .menu-card {
