@@ -727,6 +727,39 @@ Website designed &amp; created by Nikitha ✨
     });
 
 </script>
-    
+
+    <script>
+function alignHeartCard() {
+    const drinksCard = document.querySelector(".menu-card h3");
+    const heartCard = document.querySelector(".align-with-bottom-of-drinks");
+
+    if (!drinksCard || !heartCard) return;
+
+    const cards = document.querySelectorAll(".menu-card");
+    let drinks = null;
+
+    cards.forEach(card => {
+        const heading = card.querySelector("h3");
+        if (heading && heading.textContent.includes("Drinks")) {
+            drinks = card;
+        }
+    });
+
+    if (!drinks) return;
+
+    if (window.innerWidth > 750) {
+        const drinksBottom = drinks.getBoundingClientRect().bottom;
+        const heartBottom = heartCard.getBoundingClientRect().bottom;
+        const difference = drinksBottom - heartBottom;
+
+        heartCard.style.marginTop = Math.max(0, difference) + "px";
+    } else {
+        heartCard.style.marginTop = "0";
+    }
+}
+
+window.addEventListener("load", alignHeartCard);
+window.addEventListener("resize", alignHeartCard);
+</script>
 </body>
 </html>
