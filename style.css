@@ -1130,3 +1130,110 @@ nav a.active {
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
 }
+
+/* =========================
+   OUR STORY
+========================= */
+
+.about-story-section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.about-story-heading {
+    margin-bottom: 30px;
+}
+
+.about-story-heading .about-small-title {
+    margin-bottom: 8px;
+}
+
+.about-story-heading h2 {
+    margin-top: 0;
+}
+
+
+/* STORY RECTANGLE */
+
+.about-story-main {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 38px 45px;
+
+    background: #fffaf7;
+
+    border: 1px solid #f0d9de;
+    border-radius: 22px;
+
+    box-shadow: 0 6px 20px rgba(100, 50, 60, 0.08);
+
+    position: relative;
+}
+
+
+/* LITTLE DECORATION */
+
+.story-decoration {
+    color: #c9a45c;
+    font-size: 22px;
+    letter-spacing: 6px;
+    margin-bottom: 18px;
+}
+
+
+/* STORY TEXT */
+
+.about-story-main p {
+    max-width: 720px;
+    margin: 0 auto 20px;
+
+    color: #6b4a4a;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about-story-main p:last-child {
+    margin-bottom: 0;
+}
+
+.about-story-main strong {
+    color: #9e4d60;
+}
+
+
+/* SUBTLE DIVIDERS */
+
+.about-story-main p:not(:last-child)::after {
+    content: "✦";
+    display: block;
+
+    color: #e6c5cc;
+    font-size: 10px;
+
+    margin-top: 18px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .about-story-section {
+        padding: 55px 18px;
+    }
+
+    .about-story-main {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .about-story-main p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .story-decoration {
+        margin-bottom: 15px;
+    }
+
+}
