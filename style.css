@@ -1272,15 +1272,16 @@ nav a.active {
         align-items: center;
     }
 
+@media (max-width: 500px) {
 
     /* HALAL BADGE MOBILE POSITION */
 
     .halal-feature {
-        transform: translateY(10px);
+        transform: translateY(-8px);
     }
 
     .halal-badge {
-        transform: translateX(3px);
+        transform: none;
     }
 
 }
