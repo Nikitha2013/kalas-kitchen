@@ -542,8 +542,6 @@ nav a:hover {
     color: #9e4d60;
     margin: 20px 20px 8px;
 }
-    overflow: hidden;
-}
 
 .food-photo-placeholder img {
     width: 100%;
@@ -551,7 +549,6 @@ nav a:hover {
     object-fit: cover;
     transition: transform 0.35s ease;
 }
-
 .food-photo-card:hover img {
     transform: scale(1.03);
 }
