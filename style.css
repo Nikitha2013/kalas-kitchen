@@ -1294,3 +1294,48 @@ nav a.active {
     }
 
 }
+
+.notification-banner {
+    background: linear-gradient(135deg, #f2a365 0%, #cf6a7f 100%);
+    color: #fff;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin: 20px auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.notification-banner.subscribed {
+    background: linear-gradient(135deg, #2ea071 0%, #4abf9a 100%);
+}
+
+.notification-banner p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.notification-status {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.notification-banner button {
+    background: #fff;
+    color: #2d2d2d;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.notification-banner button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
