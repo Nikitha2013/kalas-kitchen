@@ -1,1 +1,908 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Place an Order | Kala's Kitchen</title>
+    <meta name="description" content="Choose your favourite homemade South Indian dishes and prepare a pre-order with Kala's Kitchen.">
+
+    <link rel="icon" type="image/png" href="logo.png?v=2">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .order-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 20px 25px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .order-notice {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            padding: 20px 25px;
+            border-radius: 18px;
+            background: #f5d6dc;
+            border: 1px solid #efd0d7;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .order-menu {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 35px;
+        }
+
+        .order-category {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: white;
+            border: 1px solid #f3dce1;
+            border-radius: 20px;
+            box-shadow: 0 5px 18px rgba(100, 50, 60, 0.08);
+        }
+
+        .order-category h3 {
+            margin: 0 0 8px;
+            color: #9e4d60;
+            font-size: 23px;
+        }
+
+        .order-category .category-subtitle {
+            margin: 0 0 20px;
+            color: #9a7777;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .order-item {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto auto;
+            gap: 14px;
+            align-items: center;
+            padding: 15px 0;
+            border-top: 1px solid #f3e5e8;
+        }
+
+        .order-item-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            min-width: 0;
+        }
+
+        .order-item-info input[type="checkbox"] {
+            width: 19px;
+            height: 19px;
+            margin-top: 3px;
+            flex-shrink: 0;
+            accent-color: #b85c70;
+            cursor: pointer;
+        }
+
+        .order-item-name {
+            display: block;
+            font-weight: bold;
+            color: #4a3030;
+            line-height: 1.45;
+        }
+
+        .order-item-description {
+            display: block;
+            margin-top: 4px;
+            color: #806666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .order-item-price {
+            color: #b85c70;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .order-quantity {
+            width: 76px;
+            padding: 9px 6px;
+            border: 1px solid #e5bdc6;
+            border-radius: 10px;
+            background: #fff9f5;
+            color: #4a3030;
+            font: inherit;
+        }
+
+        .order-quantity:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .order-total-box {
+            position: sticky;
+            bottom: 10px;
+            z-index: 20;
+            max-width: 1060px;
+            margin: 0 auto 35px;
+            padding: 22px 25px;
+            background: #fff;
+            border: 2px solid #d9a1ac;
+            border-radius: 20px;
+            box-shadow: 0 6px 22px rgba(100, 50, 60, 0.15);
+        }
+
+        .order-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .order-total-label {
+            font-weight: bold;
+            color: #9e4d60;
+            font-size: 19px;
+        }
+
+        #orderTotal {
+            color: #9e4d60;
+            font-size: 28px;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+
+        #itemCount {
+            margin: 8px 0 0;
+            color: #806666;
+            font-size: 14px;
+        }
+
+        .customer-section {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .customer-card {
+            padding: 35px;
+            background: white;
+            border: 1px solid #f3dce1;
+            border-radius: 22px;
+            box-shadow: 0 5px 18px rgba(100, 50, 60, 0.08);
+        }
+
+        .customer-card h3 {
+            color: #9e4d60;
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .customer-card > p {
+            line-height: 1.7;
+            color: #806666;
+        }
+
+        .customer-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .customer-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .customer-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .customer-field label {
+            font-weight: bold;
+            color: #6b4a4a;
+        }
+
+        .customer-field input,
+        .customer-field textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #e5bdc6;
+            border-radius: 11px;
+            background: #fffdfb;
+            color: #4a3030;
+            font: inherit;
+        }
+
+        .customer-field textarea {
+            min-height: 105px;
+            resize: vertical;
+        }
+
+        .customer-field input:focus,
+        .customer-field textarea:focus,
+        .order-quantity:focus {
+            outline: 2px solid #d98c9a;
+            outline-offset: 2px;
+        }
+
+        .order-submit {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px 22px;
+            border: 0;
+            border-radius: 999px;
+            background: #b85c70;
+            color: white;
+            font: inherit;
+            font-weight: bold;
+            font-size: 17px;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .order-submit:hover {
+            background: #9e4d60;
+            transform: translateY(-2px);
+        }
+
+        .order-submit:disabled {
+            opacity: 0.65;
+            cursor: wait;
+            transform: none;
+        }
+
+        .order-status {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .order-status.visible {
+            display: block;
+        }
+
+        .order-status.success {
+            background: #e9f7ee;
+            color: #245b39;
+            border: 1px solid #b7dfc4;
+        }
+
+        .order-status.error {
+            background: #fff0f0;
+            color: #8b3030;
+            border: 1px solid #efc5c5;
+        }
+
+        .order-status.info {
+            background: #fff5e6;
+            color: #79511f;
+            border: 1px solid #efd6a8;
+        }
+
+        .order-small-print {
+            margin-top: 18px;
+            color: #806666;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 750px) {
+            .order-total-box {
+                bottom: 8px;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+
+            .customer-card {
+                padding: 25px 20px;
+            }
+
+            .order-category {
+                padding: 22px 18px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .order-item {
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 10px;
+            }
+
+            .order-item-info {
+                grid-column: 1 / -1;
+            }
+
+            .order-item-price {
+                grid-column: 1;
+                padding-left: 30px;
+            }
+
+            .order-quantity {
+                grid-column: 2;
+                grid-row: 2;
+                width: 82px;
+            }
+
+            .customer-form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .customer-field.full-width {
+                grid-column: auto;
+            }
+
+            .order-total-box {
+                padding: 18px;
+            }
+
+            #orderTotal {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="loader">
+    <div class="loader-content">
+        <img src="logo.png" alt="Kala's Kitchen">
+        <p>Kala's Kitchen</p>
+        <span>Homemade with love ❤️</span>
+    </div>
+</div>
+
+<header>
+    <div class="header-content">
+        <div class="brand">
+            <img src="logo.png" alt="Kala's Kitchen logo">
+            <div>
+                <h1>Kala's Kitchen</h1>
+                <p>Homemade food, made with love ❤️</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="special-menu.html">Special Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="order.html" class="active">Order</a>
+        </nav>
+    </div>
+</header>
+
+<section class="page-title">
+    <h2>Place Your Order 🌸</h2>
+    <p>Choose your favourites, homemade with love.</p>
+</section>
+
+<div class="order-intro">
+    <p>
+        Browse our homemade South Indian menu, tick the dishes you'd like
+        and choose how many portions or packs you need.
+    </p>
+    <p>
+        <strong>Pre-orders only.</strong> Please order in advance.
+        Your order will need to be confirmed by Kala's Kitchen.
+    </p>
+</div>
+
+<section class="order-menu">
+    <div class="order-notice">
+        <strong>♡ A little note from our kitchen ♡</strong><br>
+        All prices are shown per listed item. The total updates as you
+        select your dishes. Please contact us if you have any questions.
+        <br><strong>📞 07440 410566</strong>
+    </div>
+
+    <form id="orderForm">
+        <div id="menuItems" aria-live="polite"></div>
+
+        <div class="order-total-box" aria-live="polite">
+            <div class="order-total-row">
+                <span class="order-total-label">Your food total</span>
+                <output id="orderTotal">£0.00</output>
+            </div>
+            <p id="itemCount">No items selected yet.</p>
+            <p class="order-small-print">
+                This is the food subtotal only. Any additional arrangements
+                must be agreed with Kala's Kitchen.
+            </p>
+        </div>
+
+        <section class="customer-section">
+            <div class="customer-card">
+                <h3>Your Details 💌</h3>
+                <p>
+                    Enter your details so Kala's Kitchen can contact you
+                    about your pre-order.
+                </p>
+
+                <div class="customer-form-grid">
+                    <div class="customer-field">
+                        <label for="customerName">Full name *</label>
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customerName"
+                            autocomplete="name"
+                            maxlength="100"
+                            required>
+                    </div>
+
+                    <div class="customer-field">
+                        <label for="customerEmail">Email address *</label>
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            name="customerEmail"
+                            autocomplete="email"
+                            maxlength="254"
+                            required>
+                    </div>
+
+                    <div class="customer-field">
+                        <label for="customerPhone">Phone number *</label>
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            name="customerPhone"
+                            autocomplete="tel"
+                            maxlength="30"
+                            required>
+                    </div>
+
+                    <div class="customer-field">
+                        <label for="orderDate">Preferred date *</label>
+                        <input
+                            type="date"
+                            id="orderDate"
+                            name="orderDate"
+                            required>
+                    </div>
+
+                    <div class="customer-field full-width">
+                        <label for="orderNotes">Extra notes (optional)</label>
+                        <textarea
+                            id="orderNotes"
+                            name="orderNotes"
+                            maxlength="1000"
+                            placeholder="Any questions or details you'd like us to know?"></textarea>
+                    </div>
+                </div>
+
+                <p class="order-small-print">
+                    Submitting an order request does not automatically
+                    guarantee availability. Kala's Kitchen will need to
+                    confirm your order and arrangements.
+                </p>
+
+                <button type="submit" class="order-submit" id="submitOrder">
+                    Submit Order ❤️
+                </button>
+
+                <div
+                    id="orderStatus"
+                    class="order-status"
+                    role="status"
+                    aria-live="polite">
+                </div>
+            </div>
+        </section>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Kala's Kitchen</p>
+    <p>Homemade food, made with love ❤️</p>
+    <p class="creator-credit">
+        Website designed &amp; created by Nikitha ✨
+    </p>
+</footer>
+
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            document.getElementById("loader").classList.add("loader-hidden");
+        }, 900);
+    });
+
+    const scrollTopButton = document.getElementById("scrollTop");
+
+    window.addEventListener("scroll", function () {
+        scrollTopButton.classList.toggle("show", window.scrollY > 300);
+    });
+
+    scrollTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    /*
+     * EMAIL SETUP
+     * This URL must point to a deployed, secure Supabase Edge Function
+     * that validates orders and sends both emails.
+     *
+     * Until that function is configured, the page will NOT claim that
+     * an order has been sent.
+     */
+    const ORDER_FUNCTION_URL =
+        "PASTE_YOUR_SUPABASE_EDGE_FUNCTION_URL_HERE";
+
+    const menu = [
+        {
+            category: "Starters & Sides ✦",
+            subtitle: "Little bites, big flavours.",
+            items: [
+                ["Methu Vadai", 3.00, "4 pieces with chutney"],
+                ["Paruppu Vadai", 3.00, "4 pieces with chutney"],
+                ["Gobi Manchurian", 5.00],
+                ["Chicken Chukka", 5.00],
+                ["Egg Paniyaram", 3.00, "12 pieces"],
+                ["Lamb Chukka", 6.00],
+                ["King Fish Fry", 7.00, "1 large or 2 medium pieces"],
+                ["Fritatta", 5.00, "8 slices — vegetables, egg & cheese"],
+                ["Aviyal", 5.00],
+                ["Onion Bajji", 3.50, "250g"]
+            ]
+        },
+        {
+            category: "Biriyani ✦",
+            subtitle: "Fragrant rice, rich spices, made with care.",
+            items: [
+                ["Vegetable Biriyani", 5.00],
+                ["Chicken Biriyani — Basmati Rice", 6.00],
+                ["Chicken Biriyani — Seeraga Samba Rice", 7.00],
+                ["Lamb Biriyani — Basmati Rice", 8.00],
+                ["Lamb Biriyani — Seeraga Samba Rice", 9.00],
+                ["Fish Biriyani", 10.00, "King Fish Cubes, Basmati"]
+            ]
+        },
+        {
+            category: "Rice & Breads 🌸",
+            subtitle: "Homemade favourites, made to be shared.",
+            items: [
+                ["Lemon Rice", 2.00],
+                ["Tamarind Rice", 3.00],
+                ["Bisibele Bath", 4.00],
+                ["Coconut Rice", 4.00],
+                ["Coconut Milk Rice & Veg Kurma", 7.00],
+                ["Coconut Milk Rice & Lamb Curry", 8.00],
+                ["Chappathi", 3.00, "5 Nos"],
+                ["Idiyappam", 3.00, "4 Nos"],
+                ["Veg Kothu Parotta", 5.00],
+                ["Egg Kothu Parotta", 6.00],
+                ["Chicken Kothu Parotta", 7.00],
+                ["Lamb Kothu Parotta", 8.00]
+            ]
+        },
+        {
+            category: "Non-Veg Curries ✦",
+            subtitle: "Rich, aromatic and full of tradition.",
+            items: [
+                ["Chicken Curry", 6.00],
+                ["Butter Chicken", 6.50],
+                ["Muttai Kulambu", 6.00, "Broken eggs"],
+                ["Chettinad Chicken", 6.50],
+                ["Prawn Curry", 7.00],
+                ["Paya", 7.50],
+                ["Lamb Curry", 8.00],
+                ["Chettinad Lamb", 8.50],
+                ["Fish Curry", 9.00, "King Fish / Salmon"]
+            ]
+        },
+        {
+            category: "Veg Curries ✦",
+            subtitle: "Comforting flavours from the heart of the kitchen.",
+            items: [
+                ["Vegetable Kurma", 5.00],
+                ["Chana Masala", 5.00],
+                ["Pav Bhaji Masala", 5.00],
+                ["Paruppu Urundai Kulambu", 5.00],
+                ["Aloo Matar Curry", 5.00],
+                ["Salna", 4.00, "Plain"],
+                ["Paneer Butter Masala", 6.50],
+                ["Matar Paneer", 6.50]
+            ]
+        },
+        {
+            category: "Sweets & Snacks 🌸",
+            subtitle: "A little sweetness for every occasion.",
+            items: [
+                ["Kesari", 3.00],
+                ["Vermicelli Payasam", 3.00],
+                ["Paruppu Payasam", 3.50],
+                ["Pineapple Kesari", 3.50],
+                ["Kuli Paniyaram", 4.00, "Sweet — 12 pieces"],
+                ["Muttai Mittai", 4.50, "250g"],
+                ["Sweet Poli", 4.00, "Wheat flour & chickpeas — 5 nos"],
+                ["Ghee Mysurpa", 4.00, "250g"],
+                ["Tea Cake", 5.00, "Approx. 400g"],
+                ["Rose Cookies", 4.00, "Achu Murukku — 15 pieces"],
+                ["Ulundhu Kali", 5.00],
+                ["Mixture", 6.00, "500g"],
+                ["Seeyam / Suzhiyam", 6.00, "8 pieces"],
+                ["Lemon Drizzle Cake", 4.00, "Approx. 250g"]
+            ]
+        },
+        {
+            category: "Drinks 🥭",
+            subtitle: "Cool, creamy and refreshing.",
+            items: [
+                ["Mango Lassi", 2.00],
+                ["Jigarthanda", 4.00]
+            ]
+        }
+    ];
+
+    const menuContainer = document.getElementById("menuItems");
+    const orderForm = document.getElementById("orderForm");
+    const orderTotal = document.getElementById("orderTotal");
+    const itemCount = document.getElementById("itemCount");
+    const statusBox = document.getElementById("orderStatus");
+    const submitButton = document.getElementById("submitOrder");
+
+    function createMenu() {
+        menu.forEach((group, groupIndex) => {
+            const section = document.createElement("section");
+            section.className = "order-category";
+
+            const heading = document.createElement("h3");
+            heading.textContent = group.category;
+            section.appendChild(heading);
+
+            const subtitle = document.createElement("p");
+            subtitle.className = "category-subtitle";
+            subtitle.textContent = group.subtitle;
+            section.appendChild(subtitle);
+
+            group.items.forEach((item, itemIndex) => {
+                const [name, price, description = ""] = item;
+                const id = "dish-" + groupIndex + "-" + itemIndex;
+
+                const row = document.createElement("div");
+                row.className = "order-item";
+
+                const info = document.createElement("div");
+                info.className = "order-item-info";
+
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.id = id;
+                checkbox.className = "dish-checkbox";
+                checkbox.dataset.name = name;
+                checkbox.dataset.price = price;
+                checkbox.setAttribute("aria-label", "Select " + name);
+
+                const label = document.createElement("label");
+                label.htmlFor = id;
+
+                const dishName = document.createElement("span");
+                dishName.className = "order-item-name";
+                dishName.textContent = name;
+                label.appendChild(dishName);
+
+                if (description) {
+                    const detail = document.createElement("span");
+                    detail.className = "order-item-description";
+                    detail.textContent = description;
+                    label.appendChild(detail);
+                }
+
+                info.appendChild(checkbox);
+                info.appendChild(label);
+
+                const priceLabel = document.createElement("span");
+                priceLabel.className = "order-item-price";
+                priceLabel.textContent = "£" + price.toFixed(2);
+
+                const quantity = document.createElement("input");
+                quantity.type = "number";
+                quantity.className = "order-quantity";
+                quantity.min = "1";
+                quantity.max = "99";
+                quantity.step = "1";
+                quantity.value = "1";
+                quantity.disabled = true;
+                quantity.setAttribute("aria-label", "Quantity of " + name);
+
+                checkbox.addEventListener("change", function () {
+                    quantity.disabled = !checkbox.checked;
+                    updateTotal();
+                });
+
+                quantity.addEventListener("input", updateTotal);
+                quantity.addEventListener("change", function () {
+                    let value = Number(quantity.value);
+
+                    if (!Number.isInteger(value) || value < 1) value = 1;
+                    if (value > 99) value = 99;
+
+                    quantity.value = String(value);
+                    updateTotal();
+                });
+
+                row.appendChild(info);
+                row.appendChild(priceLabel);
+                row.appendChild(quantity);
+                section.appendChild(row);
+            });
+
+            menuContainer.appendChild(section);
+        });
+    }
+
+    function getSelectedItems() {
+        const selected = [];
+
+        document.querySelectorAll(".dish-checkbox:checked").forEach(box => {
+            const quantityInput = box.closest(".order-item")
+                .querySelector(".order-quantity");
+
+            const quantity = Number(quantityInput.value);
+
+            if (
+                Number.isInteger(quantity) &&
+                quantity >= 1 &&
+                quantity <= 99
+            ) {
+                const price = Number(box.dataset.price);
+
+                selected.push({
+                    name: box.dataset.name,
+                    unitPrice: price,
+                    quantity: quantity,
+                    lineTotal: Math.round(price * quantity * 100) / 100
+                });
+            }
+        });
+
+        return selected;
+    }
+
+    function updateTotal() {
+        const selected = getSelectedItems();
+
+        const totalPence = selected.reduce(
+            (sum, item) => sum + Math.round(item.lineTotal * 100),
+            0
+        );
+
+        const total = totalPence / 100;
+        const quantityTotal = selected.reduce(
+            (sum, item) => sum + item.quantity,
+            0
+        );
+
+        orderTotal.textContent = total.toLocaleString("en-GB", {
+            style: "currency",
+            currency: "GBP"
+        });
+
+        itemCount.textContent = quantityTotal === 0
+            ? "No items selected yet."
+            : quantityTotal + (quantityTotal === 1
+                ? " item selected"
+                : " items selected") +
+              " across " + selected.length +
+              (selected.length === 1 ? " dish." : " dishes.");
+
+        return { selected, total };
+    }
+
+    function showStatus(message, type) {
+        statusBox.textContent = message;
+        statusBox.className = "order-status visible " + type;
+    }
+
+    function setMinimumDate() {
+        const now = new Date();
+        const localDate = new Date(
+            now.getTime() - now.getTimezoneOffset() * 60000
+        ).toISOString().slice(0, 10);
+
+        document.getElementById("orderDate").min = localDate;
+    }
+
+    orderForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        if (!orderForm.reportValidity()) return;
+
+        const { selected, total } = updateTotal();
+
+        if (selected.length === 0) {
+            showStatus("Please tick at least one dish before submitting.", "error");
+            menuContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+        }
+
+        if (
+            ORDER_FUNCTION_URL ===
+            "PASTE_YOUR_SUPABASE_EDGE_FUNCTION_URL_HERE"
+        ) {
+            showStatus(
+                "Your menu and total are working! The email service still needs to be connected before orders can be sent. No order has been submitted. Please contact Kala's Kitchen on 07440 410566 for now.",
+                "info"
+            );
+            return;
+        }
+
+        const payload = {
+            customer: {
+                name: document.getElementById("customerName").value.trim(),
+                email: document.getElementById("customerEmail").value.trim(),
+                phone: document.getElementById("customerPhone").value.trim()
+            },
+            preferredDate: document.getElementById("orderDate").value,
+            notes: document.getElementById("orderNotes").value.trim(),
+            items: selected,
+            total: total,
+            currency: "GBP"
+        };
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+
+        try {
+            const response = await fetch(ORDER_FUNCTION_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json().catch(() => ({}));
+
+            if (!response.ok || result.success !== true) {
+                throw new Error(
+                    result.message || "The order could not be submitted."
+                );
+            }
+
+            showStatus(
+                "Thank you, " + payload.customer.name +
+                "! ❤️ Your order request has been received. " +
+                "Please check your email for confirmation.",
+                "success"
+            );
+
+            orderForm.reset();
+            document.querySelectorAll(".order-quantity").forEach(input => {
+                input.disabled = true;
+                input.value = "1";
+            });
+            updateTotal();
+            setMinimumDate();
+
+        } catch (error) {
+            showStatus(
+                "We couldn't confirm that your order was submitted. " +
+                "Please try again later or contact Kala's Kitchen on 07440 410566.",
+                "error"
+            );
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit Order ❤️";
+        }
+    });
+
+    createMenu();
+    updateTotal();
+    setMinimumDate();
+</script>
+
+</body>
+</html>
