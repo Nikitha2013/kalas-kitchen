@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us | Kala's Kitchen</title>
-    <meta name="description" content="Contact Kala's Kitchen for special occasion enquiries, family gatherings and catering requests. For regular orders, visit our Order page.">
+    <meta name="description" content="Contact Kala's Kitchen about special occasions, family gatherings and catering enquiries. For regular orders, visit our Order page.">
 
     <link rel="icon" type="image/png" href="logo.png?v=2">
     <link rel="stylesheet" href="style.css">
@@ -64,11 +63,20 @@
 </section>
 
 
-<!-- CONTACT CONTENT -->
+<!-- CONTACT SECTION -->
 
-<section class="contact-section">
+<section class="section">
 
-    <div class="contact-card">
+    <p>
+        Whether you're planning a special celebration or have
+        a question about our homemade food, we're happy to hear
+        from you.
+    </p>
+
+
+    <!-- SPECIAL OCCASIONS -->
+
+    <div class="contact-box">
 
         <div class="heart-line">♡ ✦ ♡</div>
 
@@ -80,39 +88,47 @@
         </p>
 
         <p>
-            Get in touch with us to discuss your requirements
-            and the homemade food you'd love to share with
-            your family and friends.
+            Give us a call to discuss your requirements and the
+            homemade food you'd love to share with your
+            family and friends.
         </p>
 
         <p>
-            Please contact us in advance so we can discuss
-            your occasion and any special requests.
+            Please get in touch in advance so we have time
+            to discuss your occasion and any special requests.
+        </p>
+
+        <p class="contact-phone">
+            <a href="tel:07440410566"
+               style="color: inherit; text-decoration: none;">
+                07440 410566
+            </a>
         </p>
 
         <a href="tel:07440410566" class="secondary-button">
-            📞 Call Us: 07440 410566
+            📞 Call Us About Your Occasion
         </a>
 
     </div>
 
 
-    <div class="contact-card">
+    <!-- REGULAR ORDERS -->
+
+    <div class="contact-box">
 
         <div class="heart-line">♡ ✦ ♡</div>
 
-        <h3>Placing a Regular Order? 🌷</h3>
+        <h3>Looking to Place an Order? 🌷</h3>
 
         <p>
-            Looking to order something from our menu?
-            You can browse our dishes and submit your
-            order request through our dedicated Order page.
+            For regular orders, visit our Order page to browse
+            our menu, choose your dishes and submit your
+            order request.
         </p>
 
         <p>
-            All orders are subject to confirmation.
-            Please wait for confirmation before assuming
-            your order has been accepted.
+            Your order will need to be confirmed before it
+            is accepted.
         </p>
 
         <a href="order.html" class="secondary-button">
@@ -122,22 +138,25 @@
     </div>
 
 
-    <div class="contact-card">
+    <!-- GENERAL ENQUIRIES -->
+
+    <div class="contact-box">
 
         <div class="heart-line">♡ ✦ ♡</div>
 
         <h3>Have a Question? 💌</h3>
 
         <p>
-            If you have a question about our food, menu
-            or a special occasion, feel free to contact us.
+            If you have a question about our menu or would like
+            to discuss a special occasion, please feel free
+            to give us a call.
         </p>
 
         <p>
-            We look forward to hearing from you!
+            Thank you for supporting Kala's Kitchen!
         </p>
 
-        <p class="contact-note">
+        <p>
             Homemade food, made with care and served with love. ❤️
         </p>
 
@@ -157,12 +176,12 @@
     </h3>
 
     <p>
-        All food is prepared with care, so please plan ahead
-        and allow time for your order to be confirmed.
+        Our food is prepared with care, so please place
+        your order in advance.
     </p>
 
     <a href="order.html" class="secondary-button">
-        Place an Order
+        Order Now
     </a>
 
 </section>
@@ -187,10 +206,12 @@
 
 <script>
     window.addEventListener("load", function () {
+
         setTimeout(function () {
             document.getElementById("loader")
                 .classList.add("loader-hidden");
         }, 900);
+
     });
 </script>
 
@@ -205,18 +226,22 @@
     const scrollTopButton = document.getElementById("scrollTop");
 
     window.addEventListener("scroll", function () {
+
         if (window.scrollY > 300) {
             scrollTopButton.classList.add("show");
         } else {
             scrollTopButton.classList.remove("show");
         }
+
     });
 
     scrollTopButton.addEventListener("click", function () {
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+
     });
 </script>
 
