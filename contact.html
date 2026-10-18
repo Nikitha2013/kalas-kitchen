@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Kala's Kitchen</title>
-    <meta name="description" content="Get in touch with Kala's Kitchen for homemade South Indian food pre-orders and enquiries.">
+    <title>Contact Us | Kala's Kitchen</title>
+    <meta name="description" content="Contact Kala's Kitchen for special occasion enquiries, family gatherings and catering requests. For regular orders, visit our Order page.">
 
     <link rel="icon" type="image/png" href="logo.png?v=2">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,19 +18,15 @@
 <!-- LOADING SCREEN -->
 
 <div id="loader">
-
     <div class="loader-content">
-
         <img src="logo.png" alt="Kala's Kitchen">
-
         <p>Kala's Kitchen</p>
-
         <span>Homemade with love ❤️</span>
-
     </div>
-
 </div>
 
+
+<!-- HEADER -->
 
 <header>
     <div class="header-content">
@@ -57,44 +53,122 @@
 </header>
 
 
-<section class="page-title">
+<!-- PAGE TITLE -->
 
+<section class="page-title">
     <h2>Get in Touch 🌸</h2>
 
     <p>
-        We'd love to hear from you.
+        We'd love to hear from you!
     </p>
-
 </section>
 
 
-<section class="section">
+<!-- CONTACT CONTENT -->
 
-    <div class="contact-box">
+<section class="contact-section">
 
-        <h3>Interested in ordering homemade food?</h3>
+    <div class="contact-card">
 
-        <p>
-            For orders and enquiries, please get in touch using
-            the phone number below.
-        </p>
+        <div class="heart-line">♡ ✦ ♡</div>
 
-        <p class="contact-phone">
-            📞 07440 410566
-        </p>
+        <h3>Planning Something Special?</h3>
 
         <p>
-            Pre-orders only.
+            Have a birthday, family gathering, party or another
+            special occasion coming up?
         </p>
 
         <p>
-            Everything is prepared fresh with care.
+            Get in touch with us to discuss your requirements
+            and the homemade food you'd love to share with
+            your family and friends.
+        </p>
+
+        <p>
+            Please contact us in advance so we can discuss
+            your occasion and any special requests.
+        </p>
+
+        <a href="tel:07440410566" class="secondary-button">
+            📞 Call Us: 07440 410566
+        </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="heart-line">♡ ✦ ♡</div>
+
+        <h3>Placing a Regular Order? 🌷</h3>
+
+        <p>
+            Looking to order something from our menu?
+            You can browse our dishes and submit your
+            order request through our dedicated Order page.
+        </p>
+
+        <p>
+            All orders are subject to confirmation.
+            Please wait for confirmation before assuming
+            your order has been accepted.
+        </p>
+
+        <a href="order.html" class="secondary-button">
+            View Menu &amp; Place an Order
+        </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="heart-line">♡ ✦ ♡</div>
+
+        <h3>Have a Question? 💌</h3>
+
+        <p>
+            If you have a question about our food, menu
+            or a special occasion, feel free to contact us.
+        </p>
+
+        <p>
+            We look forward to hearing from you!
+        </p>
+
+        <p class="contact-note">
+            Homemade food, made with care and served with love. ❤️
         </p>
 
     </div>
 
 </section>
 
+
+<!-- PRE-ORDERS NOTICE -->
+
+<section class="preorder-box">
+
+    <h3>
+        <span class="gold-heart">♡</span>
+        Pre-Orders Only
+        <span class="gold-heart">♡</span>
+    </h3>
+
+    <p>
+        All food is prepared with care, so please plan ahead
+        and allow time for your order to be confirmed.
+    </p>
+
+    <a href="order.html" class="secondary-button">
+        Place an Order
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -112,50 +186,39 @@
 <!-- LOADING SCREEN SCRIPT -->
 
 <script>
-
     window.addEventListener("load", function () {
-
         setTimeout(function () {
-
-            document.getElementById("loader").classList.add("loader-hidden");
-
+            document.getElementById("loader")
+                .classList.add("loader-hidden");
         }, 900);
-
     });
-
 </script>
 
 
-    <!-- SCROLL TO TOP BUTTON -->
+<!-- SCROLL TO TOP BUTTON -->
 
 <button id="scrollTop" aria-label="Scroll to top">
     ↑
 </button>
 
 <script>
-
     const scrollTopButton = document.getElementById("scrollTop");
 
     window.addEventListener("scroll", function () {
-
         if (window.scrollY > 300) {
             scrollTopButton.classList.add("show");
         } else {
             scrollTopButton.classList.remove("show");
         }
-
     });
 
     scrollTopButton.addEventListener("click", function () {
-
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
-
     });
-
 </script>
-    
+
 </body>
 </html>
