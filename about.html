@@ -134,86 +134,37 @@
             Kala's Kitchen.
         </p>
 
-        <div class="food-gallery-grid">
-
-            <div class="food-photo-card">
-                <div class="food-photo-placeholder">
-                    <img src="IMG_8566.jpeg" alt="Vadai" class="food-photo-image">
-                </div>
-
-                <h3>Starters and Sides</h3>
-
-                <p>
-                    Freshly prepared food made with care.
-                </p>
-            </div>
-
-
-            <div class="food-photo-card">
-                <div class="food-photo-placeholder">
-                    <img src=".jpeg" alt="Lemon Rice" class="food-photo-image">
-                </div>
-                
-                <h3>Rice and Breads</h3>
-
-                <p>
-                    Comforting dishes with delicious South Indian flavours.
-                </p>
-            </div>
-
-
-            <div class="food-photo-card">
-                <div class="food-photo-placeholder">
-                    <img src="IMG_1772.jpeg" alt="Chicken Biriyani" class="food-photo-image">
-                </div>
-
-                <h3>Biriyani</h3>
-
-                <p>
-                    Fragrant, flavourful and made with care.
-                </p>
-            </div>
-
-
-            <div class="food-photo-card">
-                <div class="food-photo-placeholder">
-                    <img src=".jpeg" alt="Lamb Curry" class="food-photo-image">
-                </div>
-
-                <h3>Non-veg Curries</h3>
-
-                <p>
-                    A much-loved South Indian favourite.
-                </p>
-            </div>
-
-
-            <div class="food-photo-card">
-                <div class="food-photo-placeholder">
-                    <img src="FullSizeRender.jpeg" alt="Paneer Butter Masala" class="food-photo-image">
-                </div>
-
-                <h3>Veg Curries</h3>
-
-                <p>
-                    Recipes made with the same care as they are at home.
-                </p>
-            </div>
-
-
-            <div class="food-photo-card">
-                <div class="food-photo-placeholder">
-                    <img src="IMG_1773.jpeg" alt="Sweet Poli" class="food-photo-image">
-                </div>
-
-                <h3>Sweets and Snacks</h3>
-
-                <p>
-                    Homemade food prepared for sharing with family and friends.
-                </p>
-            </div>
-
+        <div class="food-gallery-grid" id="foodGallery">
+            <p>Loading our food gallery…</p>
         </div>
+        <script>
+        fetch("data/gallery.json")
+            .then(response => { if (!response.ok) throw new Error("Gallery unavailable"); return response.json(); })
+            .then(photos => {
+                const gallery = document.getElementById("foodGallery");
+                gallery.textContent = "";
+                photos.forEach(photo => {
+                    const card = document.createElement("div");
+                    card.className = "food-photo-card";
+                    const frame = document.createElement("div");
+                    frame.className = "food-photo-placeholder";
+                    const image = document.createElement("img");
+                    image.className = "food-photo-image";
+                    image.src = photo.image;
+                    image.alt = photo.image_alt || photo.title || "Food from Kala's Kitchen";
+                    frame.appendChild(image);
+                    const title = document.createElement("h3");
+                    title.textContent = photo.title || "";
+                    const caption = document.createElement("p");
+                    caption.textContent = photo.description || "";
+                    card.append(frame, title, caption);
+                    gallery.appendChild(card);
+                });
+            })
+            .catch(() => {
+                document.getElementById("foodGallery").textContent = "Our gallery is being refreshed. Please check back soon.";
+            });
+        </script>
 
     </section>
 
