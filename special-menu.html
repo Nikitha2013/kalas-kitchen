@@ -1,294 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Special Menu | Kala's Kitchen</title>
     <meta name="description" content="Discover Kala's Kitchen special menus for celebrations, festivals and special occasions, all prepared homemade with care.">
-
     <link rel="icon" type="image/png" href="logo.png?v=2">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- LOADING SCREEN -->
-
 <div id="loader">
-
     <div class="loader-content">
-
         <img src="logo.png" alt="Kala's Kitchen">
-
         <p>Kala's Kitchen</p>
-
         <span>Homemade with love ❤️</span>
-
     </div>
-
 </div>
-
 
 <header>
     <div class="header-content">
-
         <div class="brand">
             <img src="logo.png" alt="Kala's Kitchen logo">
-
             <div>
                 <h1>Kala's Kitchen</h1>
                 <p>Homemade food, made with love ❤️</p>
             </div>
         </div>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Our Menu</a>
-    <a href="special-menu.html" class="active">Special Menu</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="order.html">Order</a>
-</nav>
-
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="special-menu.html" class="active">Special Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="order.html">Order</a>
+        </nav>
     </div>
 </header>
 
-
 <section class="page-title">
-
     <h2>Special Menu ✨</h2>
-
-    <p>
-        Special dishes and menus for special occasions.
-    </p>
-
+    <p>Special dishes and menus for special occasions.</p>
 </section>
 
-<div class="diwali-feature">
-
-    <div class="diwali-firework firework-one"></div>
-    <div class="diwali-firework firework-two"></div>
-    <div class="diwali-firework firework-three"></div>
-
-    <div class="diwali-decoration">✦ ✧ ✦</div>
-
-    <h2>🪔 Happy Diwali! 🪔</h2>
-
-    <p class="diwali-subtitle">
-        Celebrate with Kala's Kitchen
-    </p>
-
-    <img
-        src="diwali-food.jpeg"
-        alt="Homemade Diwali sweets and savouries from Kala's Kitchen"
-        class="diwali-food-photo"
-    >
-
-    <p class="diwali-message">
-        Traditional homemade sweets and savouries,
-        freshly prepared with love.
-    </p>
-
-    <a href="contact.html" class="diwali-contact-button">
-        Enquire & Pre-order
-    </a>
-
-    <div class="diwali-decoration">✦ ✧ ✦</div>
-
-</div>
+<main id="specialMenus" class="special-menus" aria-live="polite">
+    <section class="special-empty">
+        <div class="special-empty-mark">?</div>
+        <h2>Something special is coming!</h2>
+        <p>Check back soon for our next celebration menu.</p>
+    </section>
+</main>
 
 <footer>
-
     <p>© 2026 Kala's Kitchen</p>
-
     <p>Homemade food, made with love ❤️</p>
-
-    <p class="creator-credit">
-        Website designed &amp; created by Nikitha ✨
-    </p>
-
+    <p class="creator-credit">Website designed &amp; created by Nikitha ✨</p>
 </footer>
 
-
-<!-- LOADING SCREEN SCRIPT -->
-
-<script>
-
-    window.addEventListener("load", function () {
-
-        setTimeout(function () {
-
-            document.getElementById("loader").classList.add("loader-hidden");
-
-        }, 900);
-
-    });
-
-</script>
-
-
-    <!-- SCROLL TO TOP BUTTON -->
-
-<button id="scrollTop" aria-label="Scroll to top">
-    ↑
-</button>
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
 
 <script>
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("loader").classList.add("loader-hidden");
+    }, 900);
+});
 
-    const scrollTopButton = document.getElementById("scrollTop");
+const scrollTopButton = document.getElementById("scrollTop");
+window.addEventListener("scroll", function () {
+    scrollTopButton.classList.toggle("show", window.scrollY > 300);
+});
+scrollTopButton.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
-    window.addEventListener("scroll", function () {
-
-        if (window.scrollY > 300) {
-            scrollTopButton.classList.add("show");
-        } else {
-            scrollTopButton.classList.remove("show");
-        }
-
-    });
-
-    scrollTopButton.addEventListener("click", function () {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-</script>
-
-    class NotificationManager {
-    constructor() {
-        this.isSupported =
-            "serviceWorker" in navigator &&
-            "Notification" in window &&
-            "PushManager" in window;
-
-        this.swRegistration = null;
-    }
-
-    async init() {
-        if (!this.isSupported) {
-            console.log("This browser does not support notifications.");
-            return false;
-        }
-
-        try {
-            this.swRegistration = await navigator.serviceWorker.register("service-worker.js", {
-                scope: "/"
-            });
-
-            console.log("Service worker registered.");
-            return true;
-        } catch (error) {
-            console.error("Service worker registration failed:", error);
-            return false;
-        }
-    }
-
-    async askPermission() {
-        if (!this.isSupported) {
-            alert("Your browser does not support notifications.");
-            return false;
-        }
-
-        const permission = await Notification.requestPermission();
-
-        if (permission !== "granted") {
-            console.log("Notification permission denied.");
-            return false;
-        }
-
-        return true;
-    }
-
-    async isSubscribed() {
-        if (!this.swRegistration) {
-            return false;
-        }
-
-        try {
-            const subscription = await this.swRegistration.pushManager.getSubscription();
-            return !!subscription;
-        } catch (error) {
-            console.error("Could not check subscription:", error);
-            return false;
-        }
-    }
-
-    async subscribe() {
-        if (!this.swRegistration) {
-            await this.init();
-        }
-
-        try {
-            const existing = await this.swRegistration.pushManager.getSubscription();
-
-            if (existing) {
-                return true;
-            }
-
-            const publicKey = "BKi3nZtQwPzj3J8x9FJ7dupfKYpK8bV0rM8Ac8pP5eA3wNn3G0EX3-0vBnW7wSFbSbU0R1e-u8uB7m7Q1qv5Q";
-            const subscription = await this.swRegistration.pushManager.subscribe({
-                userVisibleOnly: true,
-                applicationServerKey: this.urlBase64ToUint8Array(publicKey)
-            });
-
-            localStorage.setItem("kala-notification-subscription", JSON.stringify(subscription));
-            console.log("Subscribed:", subscription);
-            return true;
-        } catch (error) {
-            console.error("Push subscription failed:", error);
-            return false;
-        }
-    }
-
-    async unsubscribe() {
-        if (!this.swRegistration) {
-            return false;
-        }
-
-        try {
-            const subscription = await this.swRegistration.pushManager.getSubscription();
-
-            if (!subscription) {
-                return false;
-            }
-
-            const result = await subscription.unsubscribe();
-
-            if (result) {
-                localStorage.removeItem("kala-notification-subscription");
-                console.log("Unsubscribed from notifications.");
-            }
-
-            return result;
-        } catch (error) {
-            console.error("Unsubscribe failed:", error);
-            return false;
-        }
-    }
-
-    urlBase64ToUint8Array(base64String) {
-        const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
-        const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
-
-        const rawData = window.atob(base64);
-        const outputArray = new Uint8Array(rawData.length);
-
-        for (let i = 0; i < rawData.length; i++) {
-            outputArray[i] = rawData.charCodeAt(i);
-        }
-
-        return outputArray;
-    }
+function safeText(value) {
+    return typeof value === "string" ? value : "";
 }
 
-const notificationManager = new NotificationManager();
-                              
+function renderSpecialMenu(menu) {
+    const card = document.createElement("article");
+    const theme = ["diwali", "pongal", "holi", "navratri", "general"].includes(menu.theme) ? menu.theme : "general";
+    const layout = ["centered", "grid", "left", "carousel"].includes(menu.layout) ? menu.layout : "centered";
+    const animation = ["fireworks", "sparkles", "none"].includes(menu.animation) ? menu.animation : "none";
+    card.className = "diwali-feature special-menu-card theme-" + theme + " layout-" + layout + " animation-" + animation;
+
+    if (animation === "fireworks") {
+        ["firework-one", "firework-two", "firework-three"].forEach(function (position) {
+            const firework = document.createElement("div");
+            firework.className = "diwali-firework " + position;
+            firework.setAttribute("aria-hidden", "true");
+            card.appendChild(firework);
+        });
+    }
+
+    const decorationTop = document.createElement("div");
+    decorationTop.className = "diwali-decoration";
+    decorationTop.textContent = "✦ ✧ ✦";
+    if (animation !== "sparkles") decorationTop.hidden = true;
+    card.appendChild(decorationTop);
+
+    const heading = document.createElement("h2");
+    heading.textContent = safeText(menu.title);
+    card.appendChild(heading);
+
+    if (menu.subtitle) {
+        const subtitle = document.createElement("p");
+        subtitle.className = "diwali-subtitle";
+        subtitle.textContent = safeText(menu.subtitle);
+        card.appendChild(subtitle);
+    }
+
+    if (menu.image) {
+        const image = document.createElement("img");
+        image.className = "diwali-food-photo";
+        image.src = safeText(menu.image);
+        image.alt = safeText(menu.image_alt) || safeText(menu.title);
+        image.loading = "lazy";
+        card.appendChild(image);
+    }
+
+    if (menu.message) {
+        const message = document.createElement("p");
+        message.className = "diwali-message";
+        message.textContent = safeText(menu.message);
+        card.appendChild(message);
+    }
+
+    if (menu.button_label && menu.button_url) {
+        const link = document.createElement("a");
+        link.className = "diwali-contact-button";
+        link.textContent = safeText(menu.button_label);
+        link.href = safeText(menu.button_url);
+        card.appendChild(link);
+    }
+
+    const decorationBottom = document.createElement("div");
+    decorationBottom.className = "diwali-decoration";
+    decorationBottom.textContent = "✦ ✧ ✦";
+    if (animation !== "sparkles") decorationBottom.hidden = true;
+    card.appendChild(decorationBottom);
+    return card;
+}
+
+async function loadSpecialMenus() {
+    const container = document.getElementById("specialMenus");
+    try {
+        const response = await fetch("data/special-menus.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("Could not load special menus");
+        const menus = await response.json();
+        const published = Array.isArray(menus) ? menus.filter(function (menu) {
+            return menu && menu.published === true;
+        }) : [];
+
+        if (!published.length) return;
+
+        container.replaceChildren();
+        const layouts = new Set(published.map(function (menu) { return menu.layout || "centered"; }));
+        container.className = "special-menus " + (layouts.size === 1 ? "menus-" + Array.from(layouts)[0] : "menus-grid");
+        published.forEach(function (menu) {
+            container.appendChild(renderSpecialMenu(menu));
+        });
+    } catch (error) {
+        console.error(error);
+        // Keep the friendly empty-state visible if the content file cannot be loaded.
+    }
+}
+loadSpecialMenus();
+</script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+[
+  {
+    "image": "IMG_8566.jpeg",
+    "image_alt": "Vadai",
+    "title": "Starters and Sides",
+    "description": "Freshly prepared food made with care."
+  },
+  {
+    "image": "IMG_1772.jpeg",
+    "image_alt": "Chicken Biriyani",
+    "title": "Biriyani",
+    "description": "Fragrant, flavourful and made with care."
+  },
+  {
+    "image": "FullSizeRender.jpeg",
+    "image_alt": "Paneer Butter Masala",
+    "title": "Veg Curries",
+    "description": "Recipes made with the same care as they are at home."
+  },
+  {
+    "image": "IMG_1773.jpeg",
+    "image_alt": "Sweet Poli",
+    "title": "Sweets and Snacks",
+    "description": "Homemade food prepared for sharing with family and friends."
+  }
+]
