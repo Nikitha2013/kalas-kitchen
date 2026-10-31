@@ -1565,3 +1565,16 @@ nav a.active {
     object-fit: contain;
     float: none !important;
 }
+
+.diwali-feature {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.diwali-food-photo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
