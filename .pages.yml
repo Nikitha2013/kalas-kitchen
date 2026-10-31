@@ -1,0 +1,85 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: special-menus
+    label: Special menus
+    type: file
+    path: data/special-menus.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Heading
+        type: string
+        required: true
+      - name: subtitle
+        label: Short subtitle
+        type: string
+      - name: message
+        label: Description
+        type: text
+      - name: image
+        label: Image file path
+        type: string
+        description: Enter the image filename or path, for example diwali-food.jpeg. Upload new images using the Media section first.
+      - name: image_alt
+        label: Image description
+        type: string
+      - name: button_label
+        label: Button text
+        type: string
+      - name: button_url
+        label: Button link
+        type: string
+      - name: published
+        label: Show this menu on the website
+        type: boolean
+        default: true
+      - name: layout
+        label: Layout
+        type: select
+        options:
+          values:
+            - name: centered
+              label: Centred
+            - name: grid
+              label: Grid
+            - name: left
+              label: Left aligned
+            - name: carousel
+              label: Horizontal carousel
+      - name: theme
+        label: Festival theme
+        type: select
+        options:
+          values:
+            - name: diwali
+              label: Diwali
+            - name: pongal
+              label: Pongal
+            - name: holi
+              label: Holi
+            - name: navratri
+              label: Navratri
+            - name: general
+              label: General celebration
+      - name: animation
+        label: Decoration
+        type: select
+        options:
+          values:
+            - name: fireworks
+              label: Fireworks
+            - name: sparkles
+              label: Sparkles
+            - name: none
+              label: None
+    view:
+      fields: [title, published, theme]
+      primary: title
+
+settings:
+  content:
+    merge: true
