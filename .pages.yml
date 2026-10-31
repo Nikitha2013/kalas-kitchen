@@ -22,8 +22,7 @@ content:
         type: text
       - name: image
         label: Image file path
-        type: string
-        description: Enter the image filename or path, for example diwali-food.jpeg. Upload new images using the Media section first.
+        type: image
       - name: image_alt
         label: Image description
         type: string
