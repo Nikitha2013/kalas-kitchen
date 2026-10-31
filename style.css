@@ -1592,3 +1592,31 @@ nav a.active {
         padding: 12px;
     }
 }
+
+
+/* FESTIVAL COLOUR THEMES FOR SPECIAL MENUS */
+.special-menu-card.theme-pongal {
+    background: linear-gradient(145deg, #70451c, #a66a27, #70451c);
+}
+.special-menu-card.theme-holi {
+    background: linear-gradient(135deg, #67256f, #b13e76, #d46a45);
+}
+.special-menu-card.theme-navratri {
+    background: linear-gradient(145deg, #672c22, #9b3c2d, #672c22);
+}
+.special-menu-card.theme-general {
+    background: linear-gradient(145deg, #35105d, #542080, #35105d);
+}
+.special-menu-card.animation-sparkles .diwali-decoration {
+    display: block;
+    animation: special-sparkle 2.4s ease-in-out infinite;
+}
+@keyframes special-sparkle {
+    0%, 100% { opacity: 0.55; transform: scale(0.94); }
+    50% { opacity: 1; transform: scale(1.06); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .special-menu-card.animation-sparkles .diwali-decoration {
+        animation: none;
+    }
+}
