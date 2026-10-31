@@ -1279,7 +1279,7 @@ nav a.active {
         justify-content: center;
         align-items: center;
     }
-
+}
 @media (max-width: 500px) {
 
     /* HALAL BADGE MOBILE POSITION */
