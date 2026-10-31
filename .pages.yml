@@ -56,9 +56,11 @@ content:
     list: true
     fields:
       - name: image
-        label: Photo
+        label: Photo (optional until ready)
         type: image
-        required: true
+      - name: placeholder
+        label: Placeholder symbol
+        type: string
       - name: image_alt
         label: Photo description
         type: string
