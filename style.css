@@ -1555,3 +1555,13 @@ nav a.active {
         font-size: 26px;
     }
 }
+
+.diwali-feature img.diwali-food-photo {
+    display: block !important;
+    width: 90% !important;
+    max-width: 570px !important;
+    height: auto !important;
+    margin: 25px auto !important;
+    object-fit: contain;
+    float: none !important;
+}
