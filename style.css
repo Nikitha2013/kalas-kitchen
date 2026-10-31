@@ -1480,3 +1480,78 @@ nav a.active {
         width: 100%;
     }
 }
+
+
+/* DIWALI FEATURE - LAYOUT FIX */
+
+.diwali-feature {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 40px);
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    text-align: center;
+    background: linear-gradient(145deg, #35105d, #542080, #35105d);
+    border: 5px double #e5b957;
+    outline: 2px solid #e5b957;
+    outline-offset: 5px;
+    border-radius: 18px;
+    color: #fff8e8;
+    position: relative;
+    overflow: hidden;
+}
+
+.diwali-feature h2 {
+    color: #f5c65c;
+    font-size: 34px;
+    margin: 15px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.diwali-feature p {
+    position: relative;
+    z-index: 2;
+}
+
+.diwali-food-photo {
+    display: block;
+    width: 100%;
+    max-width: 570px;
+    height: auto;
+    margin: 25px auto;
+    border: 4px solid #e5b957;
+    border-radius: 12px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+.diwali-contact-button {
+    position: relative;
+    z-index: 3;
+}
+
+.diwali-decoration {
+    position: relative;
+    z-index: 2;
+}
+
+.diwali-firework {
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .diwali-feature {
+        padding: 30px 18px;
+        width: calc(100% - 30px);
+    }
+
+    .diwali-feature h2 {
+        font-size: 26px;
+    }
+}
