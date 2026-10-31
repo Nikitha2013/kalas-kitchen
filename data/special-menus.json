@@ -1,0 +1,15 @@
+[
+  {
+    "title": "🪔 Happy Diwali! 🪔",
+    "subtitle": "Celebrate with Kala's Kitchen",
+    "message": "Traditional homemade sweets and savouries, freshly prepared with love.",
+    "image": "diwali-food.jpeg",
+    "image_alt": "Homemade Diwali sweets and savouries from Kala's Kitchen",
+    "button_label": "Enquire & Pre-order",
+    "button_url": "contact.html",
+    "published": true,
+    "layout": "centered",
+    "theme": "diwali",
+    "animation": "fireworks"
+  }
+]
