@@ -1,0 +1,429 @@
+[
+  {
+    "name": "Methu Vadai",
+    "price": "3.00",
+    "description": "4 pieces with chutney",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Paruppu Vadai",
+    "price": "3.00",
+    "description": "4 pieces with chutney",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Gobi Manchurian",
+    "price": "5.00",
+    "description": "",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Chicken Chukka",
+    "price": "5.00",
+    "description": "",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Egg Paniyaram",
+    "price": "3.00",
+    "description": "12 pieces",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Lamb Chukka",
+    "price": "6.00",
+    "description": "",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "King Fish Fry",
+    "price": "7.00",
+    "description": "1 large or 2 medium pieces",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Fritatta",
+    "price": "5.00",
+    "description": "8 slices — vegetables, egg & cheese",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Aviyal",
+    "price": "5.00",
+    "description": "",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Onion Bajji",
+    "price": "3.50",
+    "description": "250g",
+    "category": "Starters & Sides ✦",
+    "available": true
+  },
+  {
+    "name": "Vegetable Biriyani",
+    "price": "5.00",
+    "description": "",
+    "category": "Biriyani ✦",
+    "available": true
+  },
+  {
+    "name": "Chicken Biriyani",
+    "price": "6.00",
+    "description": "Basmati Rice",
+    "category": "Biriyani ✦",
+    "available": true
+  },
+  {
+    "name": "Chicken Biriyani",
+    "price": "7.00",
+    "description": "Seeraga Samba Rice",
+    "category": "Biriyani ✦",
+    "available": true
+  },
+  {
+    "name": "Lamb Biriyani",
+    "price": "8.00",
+    "description": "Basmati Rice",
+    "category": "Biriyani ✦",
+    "available": true
+  },
+  {
+    "name": "Lamb Biriyani",
+    "price": "9.00",
+    "description": "Seeraga Samba Rice",
+    "category": "Biriyani ✦",
+    "available": true
+  },
+  {
+    "name": "Fish Biriyani",
+    "price": "10.00",
+    "description": "King Fish Cubes, Basmati",
+    "category": "Biriyani ✦",
+    "available": true
+  },
+  {
+    "name": "Lemon Rice",
+    "price": "2.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Tamarind Rice",
+    "price": "3.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Bisibele Bath",
+    "price": "4.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Coconut Rice",
+    "price": "4.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Coconut Milk Rice & Veg Kurma",
+    "price": "7.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Coconut Milk Rice & Lamb Curry",
+    "price": "8.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Chappathi",
+    "price": "3.00",
+    "description": "5 Nos",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Idiyappam",
+    "price": "3.00",
+    "description": "4 Nos",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Veg Kothu Parotta",
+    "price": "5.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Egg Kothu Parotta",
+    "price": "6.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Chicken Kothu Parotta",
+    "price": "7.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Lamb Kothu Parotta",
+    "price": "8.00",
+    "description": "",
+    "category": "Rice & Breads 🌸",
+    "available": true
+  },
+  {
+    "name": "Chicken Curry",
+    "price": "6.00",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Butter Chicken",
+    "price": "6.50",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Muttai Kulambu",
+    "price": "6.00",
+    "description": "Broken eggs",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Chettinad Chicken",
+    "price": "6.50",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Prawn Curry",
+    "price": "7.00",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Paya",
+    "price": "7.50",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Lamb Curry",
+    "price": "8.00",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Chettinad Lamb",
+    "price": "8.50",
+    "description": "",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Fish Curry",
+    "price": "9.00",
+    "description": "King Fish / Salmon",
+    "category": "Non-Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Vegetable Kurma",
+    "price": "5.00",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Chana Masala",
+    "price": "5.00",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Pav Bhaji Masala",
+    "price": "5.00",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Paruppu Urundai Kulambu",
+    "price": "5.00",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Aloo Matar Curry",
+    "price": "5.00",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Salna",
+    "price": "4.00",
+    "description": "Plain",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Paneer Butter Masala",
+    "price": "6.50",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Matar Paneer",
+    "price": "6.50",
+    "description": "",
+    "category": "Veg Curries ✦",
+    "available": true
+  },
+  {
+    "name": "Kesari",
+    "price": "3.00",
+    "description": "",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Vermicelli Payasam",
+    "price": "3.00",
+    "description": "",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Paruppu Payasam",
+    "price": "3.50",
+    "description": "",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Pineapple Kesari",
+    "price": "3.50",
+    "description": "",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Kuli Paniyaram",
+    "price": "4.00",
+    "description": "Sweet — 12 Pieces",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Muttai Mittai",
+    "price": "4.50",
+    "description": "250g",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Sweet Poli",
+    "price": "4.00",
+    "description": "Wheat flour & chickpeas — 5 nos",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Ghee Mysurpa",
+    "price": "4.00",
+    "description": "250g",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Tea Cake",
+    "price": "5.00",
+    "description": "Approx. 400g",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Rose Cookies",
+    "price": "4.00",
+    "description": "Achu Murukku — 15 Pieces",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Ulundhu Kali",
+    "price": "5.00",
+    "description": "",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Mixture",
+    "price": "6.00",
+    "description": "500g",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Seeyam / Suzhiyam",
+    "price": "6.00",
+    "description": "8 Pieces",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Lemon Drizzle Cake",
+    "price": "4.00",
+    "description": "Approx. 250g",
+    "category": "Sweets & Snacks 🌸",
+    "available": true
+  },
+  {
+    "name": "Mango Lassi",
+    "price": "2.00",
+    "description": "",
+    "category": "Drinks 🥭",
+    "available": true
+  },
+  {
+    "name": "Jigarthanda",
+    "price": "4.00",
+    "description": "",
+    "category": "Drinks 🥭",
+    "available": true
+  }
+]
