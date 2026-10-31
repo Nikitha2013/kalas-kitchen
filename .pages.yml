@@ -3,6 +3,75 @@ media:
   output: /media
 
 content:
+  - name: menu-items
+    label: Menu items
+    type: file
+    path: data/menu-items.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        label: Dish name
+        type: string
+        required: true
+      - name: price
+        label: Price in pounds (numbers only)
+        type: string
+        required: true
+      - name: description
+        label: Short description or portion size
+        type: text
+      - name: category
+        label: Menu category
+        type: select
+        options:
+          values:
+            - name: Starters & Sides ✦
+              label: Starters & Sides
+            - name: Biriyani ✦
+              label: Biriyani
+            - name: Rice & Breads 🌸
+              label: Rice & Breads
+            - name: Non-Veg Curries ✦
+              label: Non-Veg Curries
+            - name: Veg Curries ✦
+              label: Veg Curries
+            - name: Sweets & Snacks 🌸
+              label: Sweets & Snacks
+            - name: Drinks 🥭
+              label: Drinks
+      - name: available
+        label: Show on the menu
+        type: boolean
+        default: true
+    view:
+      fields: [name, category, price, available]
+      primary: name
+
+  - name: gallery
+    label: Food gallery
+    type: file
+    path: data/gallery.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Photo
+        type: image
+        required: true
+      - name: image_alt
+        label: Photo description
+        type: string
+      - name: title
+        label: Photo heading
+        type: string
+      - name: description
+        label: Caption
+        type: text
+    view:
+      fields: [title, image]
+      primary: title
+
   - name: special-menus
     label: Special menus
     type: file
