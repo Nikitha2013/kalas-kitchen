@@ -1338,3 +1338,145 @@ nav a.active {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+
+/* DIWALI SPECIAL FEATURE */
+
+.diwali-feature {
+    position: relative;
+    overflow: hidden;
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 40px 25px;
+    text-align: center;
+    background: linear-gradient(145deg, #35105d, #542080, #35105d);
+    border: 4px double #e5b957;
+    outline: 1px solid #e5b957;
+    outline-offset: 5px;
+    border-radius: 18px;
+    color: #fff8e8;
+    box-shadow: 0 8px 25px rgba(45, 15, 65, 0.2);
+}
+
+.diwali-feature h2 {
+    color: #f5c65c;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.diwali-subtitle {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.diwali-food-photo {
+    display: block;
+    width: 90%;
+    max-width: 570px;
+    margin: 20px auto;
+    border: 4px solid #e5b957;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.diwali-message {
+    font-size: 17px;
+    margin: 22px auto;
+}
+
+.diwali-decoration {
+    color: #f5c65c;
+    font-size: 28px;
+    letter-spacing: 12px;
+    margin: 15px;
+}
+
+.diwali-contact-button {
+    display: inline-block;
+    margin: 15px;
+    padding: 13px 28px;
+    background: #e5b957;
+    color: #35105d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.diwali-contact-button:hover {
+    background: #fff0bd;
+    transform: translateY(-3px);
+}
+
+/* FIREWORK ANIMATION */
+
+.diwali-firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: diwali-burst 2.5s ease-out infinite;
+}
+
+.diwali-firework::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow:
+        0 -35px #f5c65c,
+        0 35px #f5c65c,
+        35px 0 #ff8c69,
+        -35px 0 #ff8c69,
+        25px 25px #fff0bd,
+        -25px -25px #fff0bd,
+        25px -25px #e9a8d0,
+        -25px 25px #e9a8d0;
+}
+
+.firework-one {
+    top: 100px;
+    left: 12%;
+}
+
+.firework-two {
+    top: 180px;
+    right: 12%;
+    animation-delay: 0.8s;
+}
+
+.firework-three {
+    top: 330px;
+    left: 85%;
+    animation-delay: 1.5s;
+}
+
+@keyframes diwali-burst {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+}
+
+@media (max-width: 600px) {
+    .diwali-feature {
+        padding: 30px 15px;
+    }
+
+    .diwali-feature h2 {
+        font-size: 25px;
+    }
+
+    .diwali-food-photo {
+        width: 100%;
+    }
+}
