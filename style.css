@@ -1496,3 +1496,99 @@ nav a.active {
         width: 100%;
     }
 }
+
+
+/* SPECIAL MENU FRAME AND EDITABLE LAYOUTS */
+.special-menus {
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    min-height: 280px;
+    margin: 45px auto 55px;
+    padding: 22px;
+    border: 5px double #e5b957;
+    outline: 2px solid #e5b957;
+    outline-offset: 5px;
+    border-radius: 20px;
+    background: #35105d;
+    box-shadow: 0 8px 25px rgba(45, 15, 65, 0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+
+.special-menus .diwali-feature {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.special-empty {
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    color: #fff8e8;
+}
+
+.special-empty-mark {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #e5b957;
+    border-radius: 50%;
+    color: #f5c65c;
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+
+.special-empty h2 {
+    color: #f5c65c;
+    margin: 8px 0;
+}
+
+.special-empty p {
+    margin: 5px 0;
+}
+
+.special-menus.menus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    align-items: stretch;
+}
+
+.special-menus.menus-left .special-menu-card {
+    align-items: flex-start;
+    text-align: left;
+}
+
+.special-menus.menus-left .special-menu-card .diwali-food-photo {
+    margin-left: 0;
+}
+
+.special-menus.menus-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.special-menus.menus-carousel .special-menu-card {
+    flex: 0 0 min(100%, 620px);
+    scroll-snap-align: center;
+}
+
+@media (max-width: 600px) {
+    .special-menus {
+        width: calc(100% - 30px);
+        padding: 12px;
+    }
+}
